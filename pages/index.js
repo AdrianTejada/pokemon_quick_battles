@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Button from './comps/button'
-import FightButton from './comps/battlebutton'
+import Button from '../comps/button'
+import FightButton from '../comps/battlebutton'
 
 export default function Home() {
   return (
