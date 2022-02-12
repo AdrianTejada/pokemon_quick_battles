@@ -4,7 +4,7 @@ import styled from "styled-components"
 const MainButton = styled.button`
     width:100px;
     height:30px;
-    background-color:${props=>props.bg};
+    background:${props=>props.bg};
     border-radius:20px;
     color:white;
     box-shadow: 0px 1px 1px black;
@@ -12,15 +12,15 @@ const MainButton = styled.button`
 `;
 
 const Button = ({
-    bg="#BF2525",
+    bg="linear-gradient(0deg,#E83838,#BF2525)",
     text="Start"
 }) => {
     const router = useRouter()
 
     return <div>
-        <MainButton bg={bg}>
-            {text}
-        </MainButton>
+            <MainButton bg={bg}>
+                {text}
+            </MainButton>
     </div>
 }
 

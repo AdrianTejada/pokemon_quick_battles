@@ -4,7 +4,7 @@ import styled from "styled-components"
 const BattleButton = styled.button`
     width:150px;
     height:75px;
-    background-color:${props=>props.bg};
+    background:${props=>props.bg};
     border-radius:10px;
     color:white;
     box-shadow: 0px 2px 2px black;
@@ -12,7 +12,7 @@ const BattleButton = styled.button`
 `;
 
 const FightButton = ({
-    bg="#BF2525",
+    bg="linear-gradient(0deg,#884040,#E83838)",
     text="Fight"
 }) => {
     const router = useRouter()
