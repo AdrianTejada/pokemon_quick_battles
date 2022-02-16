@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import mypic from '../public/Vector.png'
+import mypic from '@/public/black.png'
 
 const CardWrapper = styled.div`
   overflow: hidden;
@@ -13,6 +13,9 @@ const CardWrapper = styled.div`
   border-radius: 15px;
   background-color: lightgrey;
   opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 
