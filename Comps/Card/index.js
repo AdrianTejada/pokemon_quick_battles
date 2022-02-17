@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { RadarChart } from "recharts";
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 
 const Cont = styled.div`
     width: 440px;
     margin-bottom: -437px;
+    position: relative;
+    left: 50px;
 `
 const ClearCont = styled.div`
     width: 440px;
@@ -19,8 +21,13 @@ const ClearCont = styled.div`
 `
 
 const PictureCont = styled.div`
-    width: 100%;
-    height: 50%;
+    width: 440px;
+    position: absolute;
+    top:-10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(1);
 `
 
 const Triangle = styled.div`
@@ -36,13 +43,14 @@ const TriangleExtension = styled.div`
     height: 80px;
     background-color: #FF6161;
     z-index: 1;
-    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 const TriangleText = styled.div`
     position: relative;
-    font-size: 30px;
-    top: 28px;
+    font-size: 45px;
 `
 
 const TriangleCont = styled.div`
@@ -64,7 +72,10 @@ const Banner = styled.div`
     background-color: #3C3C3C;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 170px;
+`
+
+const BannerText = styled.div`
     font-size: 30px;
     color: white;
 `
@@ -84,43 +95,129 @@ const Data = styled.div`
     border-radius: 0px 0px 20px 20px;
 `
 
-const Type = styled.div`
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
-    border: solid 2px black;
-    background-color: black;
+const TypeCont = styled.div`
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -40px;
+    justify-content: flex-end;
+    height: 100px;
+`
+
+const TypeBorder = styled.div`
+    width: 110px;
+    height: 35px;
+    border-radius: 0px 20px 20px 0px;
+    border-style: solid;
+    border-width: 3px 3px 3px 0px;
+    border-color: black black black transparent;
+    background-color: white;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+`
+
+const TypeColor = styled.div`
+    background-color: #A5B41D;
+    height: 20px;
+    width: 100px;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const PokeImage = styled.img`
+    min-width: 300px;
+    min-height: 300px;
+    filter: contrast(150%);
+    image-rendering: pixelated;
 `
 
 const Card = ({
-    name="fuck",
-    number="194"
+    name="Ivysaur",
+    number="1",
+    type1="GRASS",
+    type2="POISON",
+    hp=45,
+    atk=49,
+    def=49,
+    sp_atk=65,
+    sp_def=65
 }) => {
+    const data = [
+        {
+          subject: 'HP',
+          A: parseInt(hp),
+          fullMark: 154,
+        },
+        {
+          subject: 'Attack',
+          A: parseInt(atk),
+          fullMark: 190,
+        },
+        {
+          subject: 'Defence',
+          A: parseInt(def),
+          fullMark: 180,
+        },
+        {
+          subject: 'Sp. Atk',
+          A: parseInt(sp_atk),
+          fullMark: 194,
+        },
+        {
+          subject: 'Sp. Def',
+          A: parseInt(sp_def),
+          fullMark: 167,
+        },
+      ];
     return <Cont>
-        <ClearCont>
             <PictureCont>
+                <PokeImage src={`https://img.pokemondb.net/sprites/black-white/normal/${name.toLowerCase()}.png`}/>
             </PictureCont>
+        <ClearCont>
+
         </ClearCont>
 
         <DataCont>
             <BannerCont>
+            <TypeCont>
+                <TypeBorder>
+                    <TypeColor>
+                        {type1}
+                    </TypeColor>
+                </TypeBorder>
+                <TypeBorder>
+                    <TypeColor>
+                        {type2}
+                    </TypeColor>
+                </TypeBorder>
+            </TypeCont>
                 <TriangleCont>
                     <TriangleExtension>
                         <TriangleText>
-                            No. {number}
+                            {number}
                         </TriangleText>
                     </TriangleExtension>
                     <Triangle/>
                 </TriangleCont>
-
                 <Banner>
-                    {name}
+                    <BannerText>
+                        {name}
+                    </BannerText>
                 </Banner>
-
-
             </BannerCont>
-
-            <Data bg={'lightblue'}>
+            <Data bg={'white'}> {/* // gray for dark mode */}
+            <ResponsiveContainer width="100%" height="100%" >
+                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+                        <PolarGrid/> // grid: ;
+                        <PolarAngleAxis dataKey="subject"/> // text
+                        <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} /> // fill
+                    </RadarChart>
+                </ResponsiveContainer>
             </Data>
         </DataCont>
 
