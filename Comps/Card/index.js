@@ -85,11 +85,15 @@ const Data = styled.div`
 `
 
 const Type = styled.div`
-    /* width: ; */
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 2px black;
+    background-color: black;
 `
 
 const Card = ({
-    name="Fletchinder",
+    name="fuck",
     number="194"
 }) => {
     return <Cont>
@@ -108,9 +112,12 @@ const Card = ({
                     </TriangleExtension>
                     <Triangle/>
                 </TriangleCont>
+
                 <Banner>
                     {name}
                 </Banner>
+
+
             </BannerCont>
 
             <Data bg={'lightblue'}>
