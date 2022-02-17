@@ -134,7 +134,6 @@ const PokeImage = styled.img`
     min-height: 300px;
     filter: contrast(150%);
     image-rendering: pixelated;
-
 `
 
 const Card = ({
