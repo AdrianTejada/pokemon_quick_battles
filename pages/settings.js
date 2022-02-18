@@ -15,10 +15,9 @@ const Main = styled.div`
 `
 
 export default function Settings () {
-    const {theme} = useProvider()
+    const {theme, gen1, gen2, gen3, gen4, gen5, gen6, show_legendaries} = useProvider()
     return <Main>
             <SettingsCard/>
-                <Button text="show provider info" onClick={()=>console.log(theme)}/>
             </Main>
     {/* </Background> */}
 }

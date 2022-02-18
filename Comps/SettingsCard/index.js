@@ -103,7 +103,16 @@ const Circle = styled.div`
 
 
 export default function SettingsCard () {
-    const {theme, setTheme} = useProvider()
+    const {
+        theme, setTheme,
+        gen1, setGen1,
+        gen2, setGen2,
+        gen3, setGen3,
+        gen4, setGen4,
+        gen5, setGen5,
+        gen6, setGen6,
+        show_legendaries, setLegend
+    } = useProvider()
     return <MainCont>
         <Opacity/>
         <Cont>
@@ -118,46 +127,58 @@ export default function SettingsCard () {
             <Line/>
                 <GenCont>
                     <Row>
-                        <Check>
-                            <CheckBox type='checkbox'>
-                            </CheckBox>
+                        <Check onClick={()=>setGen1(gen1==1?false:1)}>
+                            <CheckBox
+                                type='checkbox'
+                                checked={gen1==1?true:false}
+                            />
                             <CheckText>
                                 Gen 1
                             </CheckText>
                         </Check>
-                        <Check>
-                        <CheckBox type='checkbox'>
-                            </CheckBox>
+                        <Check onClick={()=>setGen2(gen2==2?false:2)}>
+                            <CheckBox
+                                type='checkbox'
+                                checked={gen2==2?true:false}
+                            />
                             <CheckText>
                                 Gen 2
                             </CheckText>
                         </Check>
-                        <Check>
-                            <CheckBox type='checkbox'>
-                            </CheckBox>
+                        <Check onClick={()=>setGen3(gen3==3?false:3)}>
+                            <CheckBox
+                                type='checkbox'
+                                checked={gen3==3?true:false}
+                            />
                             <CheckText>
                                 Gen 3
                             </CheckText>
                         </Check>
                     </Row>
                     <Row>
-                    <Check>
-                        <CheckBox type='checkbox'>
-                        </CheckBox>
+                    <Check onClick={()=>setGen4(gen4==4?false:4)}>
+                            <CheckBox
+                                type='checkbox'
+                                checked={gen4==4?true:false}
+                            />
                         <CheckText>
                             Gen 4
                         </CheckText>
                     </Check>
-                    <Check>
-                        <CheckBox type='checkbox'>
-                            </CheckBox>
+                    <Check onClick={()=>setGen5(gen5==5?false:5)}>
+                            <CheckBox
+                                type='checkbox'
+                                checked={gen5==5?true:false}
+                            />
                             <CheckText>
                                 Gen 5
                             </CheckText>
                         </Check>
-                        <Check>
-                            <CheckBox type='checkbox'>
-                            </CheckBox>
+                        <Check onClick={()=>setGen6(gen6==6?false:6)}>
+                            <CheckBox
+                                type='checkbox'
+                                checked={gen6==6?true:false}
+                            />
                             <CheckText>
                                 Gen 6
                             </CheckText>
@@ -165,9 +186,10 @@ export default function SettingsCard () {
                     </Row>
                 </GenCont>
             <Line/>
-            <SubCont style={{justifyContent: 'center'}}>
-                <CheckBox type='checkbox'>
-                    </CheckBox>
+            <SubCont style={{justifyContent: 'center'}} onClick={()=>setLegend(show_legendaries==false?true:false)}>
+                    <CheckBox type='checkbox'
+                        checked={show_legendaries}
+                    />
                     <CheckText>
                         Legendaries Only
                     </CheckText>
