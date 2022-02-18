@@ -18,6 +18,7 @@ const ClearCont = styled.div`
     border-radius: 20px;
     opacity: 0.22;
     background-color: #181818;
+    backdrop-filter: blur(10px);
 `
 
 const PictureCont = styled.div`

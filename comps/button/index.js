@@ -13,11 +13,12 @@ const MainButton = styled.button`
 
 const Button = ({
     bg="linear-gradient(0deg,#E83838,#BF2525)",
-    text="Start"
+    text="Start",
+    onClick=()=>{}
 }) => {
     const router = useRouter()
 
-    return <div>
+    return <div onClick={onClick()}>
             <MainButton bg={bg}>
                 {text}
             </MainButton>
