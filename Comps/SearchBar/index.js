@@ -56,16 +56,6 @@ export default function SearchBar () {
             setData(result.data);
             timer = null;
             console.log(data)
-            console.log({
-                txt,
-                gen1,
-                gen2,
-                gen3,
-                gen4,
-                gen5,
-                gen6,
-                show_legendaries
-            })
             }, 1000)
         }
     }
