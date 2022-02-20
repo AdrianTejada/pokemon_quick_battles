@@ -4,8 +4,6 @@ import { useState } from "react";
 import { useProvider } from '@/utils/provider';
 import MiniCard from "../MiniCard";
 import React from "react";
-import Button from "../Button";
-
 
 const Cont = styled.div`
     width: 507px;
@@ -41,13 +39,14 @@ const Triangle = styled.div`
 const Data = styled.div`
     min-width: 100%;
     border-radius: 20px;
-    height: 280px;
+    height: 500px;
     background-color: white;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    overflow: scroll;
 `
 
 var timer = null;
