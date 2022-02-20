@@ -14,7 +14,7 @@ const Main = styled.div`
 
 export default function Settings () {
     return <Main>
-        <Background/> 
         <SettingsCard/>
+        <Background/> 
 </Main>
 }

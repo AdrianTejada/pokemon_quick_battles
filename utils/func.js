@@ -12,18 +12,6 @@ export function filter (arr = [],
 ) {
 
     const {txt, gen1, gen2, gen3, gen4, gen5, gen6, only_legendary} = config
-
-    console.log({
-        txt,
-        gen1,
-        gen2,
-        gen3,
-        gen4,
-        gen5,
-        gen6,
-        only_legendary,
-    })
-
     if (txt == null){
         return []
     } else {
@@ -59,16 +47,3 @@ export function filter (arr = [],
         }
     }
 }
-
-// const pokemon = require('./Pokemon.json')
-
-// console.log(filter(pokemon, {
-//     txt:"Psychic",
-//     gen1:1,
-//     gen2:2,
-//     gen3:3,
-//     gen4:4,
-//     gen5:5,
-//     gen6:6,
-//     only_legendary: true
-// }))

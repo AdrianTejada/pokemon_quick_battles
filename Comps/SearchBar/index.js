@@ -17,8 +17,29 @@ const SearchCont = styled.input`
     border-width: 0px;
     font-size: 20px;
 `
-var timer = null;
 
+const DataCont = styled.div`
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const Traingle = styled.div`
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 33.5px 35px 33.5px;
+    border-color: transparent transparent #ffffff transparent;
+    margin-top: 30px;
+`
+
+const Data = styled.div`
+    min-width: 100%;
+    
+`
+
+var timer = null;
 
 export default function SearchBar () {
     const {
@@ -32,7 +53,6 @@ export default function SearchBar () {
     } = useProvider()
 
     const [data, setData] = useState([])
-
 
     const Search = async (txt) => {
         if (timer) {
@@ -54,8 +74,8 @@ export default function SearchBar () {
                     show_legendaries
                 }})
             setData(result.data);
-            timer = null;
             console.log(data)
+            timer = null;
             }, 1000)
         }
     }
@@ -63,7 +83,12 @@ export default function SearchBar () {
     return <Cont>
         <SearchCont
             placeholder="Search Pokemon"
-            onChange={(e)=>Search(e.target.value)}
-        />
+            onChange={(e)=>{
+                Search(e.target.value)
+        }}/>
+
+        <DataCont>
+            <Traingle/>
+        </DataCont>
     </Cont>
 }
