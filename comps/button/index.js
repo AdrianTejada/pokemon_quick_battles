@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import styled from "styled-components"
 
 const MainButton = styled.button`
@@ -16,8 +15,6 @@ const Button = ({
     text="Start",
     onClick=()=>{}
 }) => {
-    const router = useRouter()
-
     return <div onClick={onClick()}>
             <MainButton bg={bg}>
                 {text}

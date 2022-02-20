@@ -14,7 +14,7 @@ const Main = styled.div`
 
 export default function Stadium () {
     return <Main>
-        <Background/>
         <SearchBar/>
+        <Background/>
 </Main>
 }
