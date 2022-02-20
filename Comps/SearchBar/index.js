@@ -2,9 +2,13 @@ import axios from "axios";
 import styled from "styled-components";
 import { useState } from "react";
 import { useProvider } from '@/utils/provider';
+import MiniCard from "../MiniCard";
+import React from "react";
+import Button from "../Button";
+
 
 const Cont = styled.div`
-    min-width: 507px;
+    width: 507px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +29,7 @@ const DataCont = styled.div`
     align-items: center;
 `
 
-const Traingle = styled.div`
+const Triangle = styled.div`
     width: 0;
     height: 0;
     border-style: solid;
@@ -36,7 +40,14 @@ const Traingle = styled.div`
 
 const Data = styled.div`
     min-width: 100%;
-    
+    border-radius: 20px;
+    height: 280px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 `
 
 var timer = null;
@@ -52,7 +63,7 @@ export default function SearchBar () {
         show_legendaries
     } = useProvider()
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState("")
 
     const Search = async (txt) => {
         if (timer) {
@@ -73,7 +84,7 @@ export default function SearchBar () {
                     gen6,
                     show_legendaries
                 }})
-            setData(result.data);
+            setData(result===[]?null:result.data);
             console.log(data)
             timer = null;
             }, 1000)
@@ -82,13 +93,21 @@ export default function SearchBar () {
 
     return <Cont>
         <SearchCont
-            placeholder="Search Pokemon"
+            placeholder="Search Pokemon by name or type!"
             onChange={(e)=>{
                 Search(e.target.value)
         }}/>
-
-        <DataCont>
-            <Traingle/>
-        </DataCont>
+        
+        {data===""?<React.Fragment/>:<DataCont>
+            <Triangle/>
+            <Data>
+                {data.map((o,i)=><div key={i}>
+                        <MiniCard
+                            name={o.Name}
+                        />
+                    </div>
+                )}
+            </Data>
+        </DataCont>}
     </Cont>
 }

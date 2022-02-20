@@ -177,7 +177,7 @@ const Card = ({
       ];
     return <Cont>
             <PictureCont>
-                <PokeImage src={`https://img.pokemondb.net/sprites/black-white/normal/${name.toLowerCase()}.png`}/>
+                <PokeImage src={`https://img.pokemondb.net/sprites/x-y/normal/${name.toLowerCase()}.png`}/>
             </PictureCont>
         <ClearCont>
 

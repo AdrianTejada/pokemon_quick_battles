@@ -12,8 +12,8 @@ export function filter (arr = [],
 ) {
 
     const {txt, gen1, gen2, gen3, gen4, gen5, gen6, only_legendary} = config
-    if (txt == null){
-        return []
+    if (txt == null || txt == ""){
+        return ""
     } else {
         const filtered_arr = arr.filter((o)=>{
             if ((o.id == txt
