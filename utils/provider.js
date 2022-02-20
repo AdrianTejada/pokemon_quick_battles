@@ -31,7 +31,7 @@ export default function AppProvider({children}) {
     const [gen5, setGen5] = useState(initialStates.gen5)
     const [gen6, setGen6] = useState(initialStates.gen6)
 
-    const [show_legendaries, setLegend] = useState()
+    const [show_legendaries, setLegend] = useState(initialStates.show_legendaries)
 
     return <MyContext.Provider
     value={{
