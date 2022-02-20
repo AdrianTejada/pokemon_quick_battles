@@ -63,7 +63,7 @@ export default function SearchBar () {
         show_legendaries
     } = useProvider()
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState("")
 
     const Search = async (txt) => {
         if (timer) {
@@ -93,23 +93,12 @@ export default function SearchBar () {
 
     return <Cont>
         <SearchCont
-            placeholder="Search Pokemon"
+            placeholder="Search Pokemon by name or type!"
             onChange={(e)=>{
                 Search(e.target.value)
         }}/>
         
-        {/* {data===[]?<React.Fragment/>:<DataCont>
-            <Triangle/>
-            <Data>
-                {data.map((o,i)=>{
-                    <MiniCard
-                        name={o.Name}
-                    />
-                })}
-            </Data>
-        </DataCont>} */}
-
-        <DataCont>
+        {data===""?<React.Fragment/>:<DataCont>
             <Triangle/>
             <Data>
                 {data.map((o,i)=><div key={i}>
@@ -118,13 +107,7 @@ export default function SearchBar () {
                         />
                     </div>
                 )}
-
-                {/* <MiniCard
-                        name={'Bulbasaur'}
-                    /> */}
             </Data>
-        </DataCont>
-
-        <Button text="show data" onClick={()=>console.log(data)}/>
+        </DataCont>}
     </Cont>
 }

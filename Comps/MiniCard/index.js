@@ -29,7 +29,7 @@ export default function MiniCard ({
     name="Pikachu",
 }) {
     return <Cont>
-        <Pokemon src={`https://img.pokemondb.net/sprites/black-white/normal/${name.toLowerCase()}.png`}></Pokemon>
+        <Pokemon src={`https://img.pokemondb.net/sprites/x-y/normal/${name.toLowerCase()}.png`}></Pokemon>
         <Text>{name}</Text>
     </Cont>
 }
