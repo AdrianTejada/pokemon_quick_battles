@@ -15,7 +15,7 @@ const Button = ({
     text="Start",
     onClick=()=>{}
 }) => {
-    return <div onClick={onClick()}>
+    return <div onClick={()=>onClick()}>
             <MainButton bg={bg}>
                 {text}
             </MainButton>
