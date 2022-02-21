@@ -12,43 +12,36 @@ const Main = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 `
 
-const SearchCont = styled.div`
-    position: absolute;
-    align-self: center;
-    top: 20px;
-`
-
 const PlaceHolderCont = styled.div`
-    display: flex;
-    min-width: 1000px;
+    position: absolute;
     justify-content: space-between;
+    display: flex;
+    top: 300px;
+    width: 1000px;
 `
 
 
 
 export default function Stadium () {
     return <Main>
-        <React.Fragment/>
         <Background/>
+        <React.Fragment/>
 
         <DndProvider backend={TouchBackend}
             options={{
-                enableTouchEvents:false,
+                enableTouchEvents:true,
 				enableMouseEvents:true
             }}>
             <PlaceHolderCont>
                 <CardPlaceHolder/>
                 <CardPlaceHolder/>
             </PlaceHolderCont>
+        <SearchBar/>
         </DndProvider>
-
-        <SearchCont>
-            <SearchBar/>
-        </SearchCont>
 </Main>
 }

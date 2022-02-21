@@ -146,7 +146,8 @@ const Card = ({
     atk=49,
     def=49,
     sp_atk=65,
-    sp_def=65
+    sp_def=65,
+    speed=45
 }) => {
     const data = [
         {
@@ -174,6 +175,11 @@ const Card = ({
           A: parseInt(sp_def),
           fullMark: 167,
         },
+        {
+            subject: 'Speed',
+            A: parseInt(speed),
+            fullMark: 180
+        }
       ];
     return <Cont>
             <PictureCont>
