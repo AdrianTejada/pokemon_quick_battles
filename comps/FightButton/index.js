@@ -1,10 +1,12 @@
 import { useRouter } from "next/router"
 import styled from "styled-components"
+import { useProvider } from "@/utils/provider";
+import { battlebgcolor } from '../variable'
 
 const BattleButton = styled.button`
     width:150px;
     height:75px;
-    background:${props=>props.bg};
+    background:${props=>props.battlebackground};
     border-radius:10px;
     color:white;
     box-shadow: 0px 2px 2px black;
@@ -12,13 +14,15 @@ const BattleButton = styled.button`
 `;
 
 const FightButton = ({
-    bg="linear-gradient(0deg,#884040,#E83838)",
+    battlebg=battlebgcolor,
     text="Fight"
 }) => {
+    
     const router = useRouter()
+    const{theme} = useProvider();
 
     return <div>
-        <BattleButton bg={bg}>
+        <BattleButton battlebackground={battlebg[theme]}>
             {text}
         </BattleButton>
     </div>
