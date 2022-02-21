@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { useDrag } from "react-dnd";
 
 const Cont = styled.div`
     min-width: 100px;
@@ -10,6 +11,7 @@ const Cont = styled.div`
     filter: drop-shadow(0px 5px 5px #C4C4C4);
     background-color: white;
     overflow: hidden;
+    margin-bottom: 15px;
 `
 
 const Pokemon = styled.img`
@@ -28,7 +30,12 @@ const Text = styled.div`
 export default function MiniCard ({
     name="Pikachu",
 }) {
-    return <Cont>
+    const [{isDragging, coords}, drag, dragPreview] = useDrag(()=>{
+        type:'pokemon',
+        item
+    })
+
+    return <Cont ref={dragPreview}>
         <Pokemon src={`https://img.pokemondb.net/sprites/x-y/normal/${name.toLowerCase()}.png`}></Pokemon>
         <Text>{name}</Text>
     </Cont>

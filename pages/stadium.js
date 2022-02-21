@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import React from "react";
 
+import { DndProvider } from 'react-dnd';
+import { TouchBackend} from 'react-dnd-touch-backend'
+
 import { Background } from "@/Comps/Background";
 import SearchBar from "@/Comps/SearchBar";
 import CardPlaceHolder from "@/Comps/CardPlaceHolder";
@@ -27,15 +30,22 @@ const PlaceHolderCont = styled.div`
 `
 
 
+
 export default function Stadium () {
     return <Main>
-        <Background/>
         <React.Fragment/>
+        <Background/>
 
-        <PlaceHolderCont>
-            <CardPlaceHolder/>
-            <CardPlaceHolder/>
-        </PlaceHolderCont>
+        <DndProvider backend={TouchBackend}
+            options={{
+                enableTouchEvents:false,
+				enableMouseEvents:true
+            }}>
+            <PlaceHolderCont>
+                <CardPlaceHolder/>
+                <CardPlaceHolder/>
+            </PlaceHolderCont>
+        </DndProvider>
 
         <SearchCont>
             <SearchBar/>
