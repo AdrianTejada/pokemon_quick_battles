@@ -88,7 +88,7 @@ export default function SearchBar () {
             setData(result===[]?null:result.data);
             console.log(data)
             timer = null;
-            }, 1000)
+            }, 500)
         }
     }
 

@@ -10,7 +10,7 @@ const DropCont = styled.div`
 
 const DropZone = ({
     children=null,
-    onDropItem=()=>{}
+    onDropItem=()=>{},
 }) => {
     const [{canDrop, isOver}, drop] = useDrop(()=>({
         accept:'pokemon',

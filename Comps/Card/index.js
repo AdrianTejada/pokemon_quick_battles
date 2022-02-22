@@ -134,7 +134,7 @@ const PokeImage = styled.img`
     min-height: 300px;
     filter: contrast(150%);
     image-rendering: pixelated;
-    filter: saturate(1.4) brightness(1.1);
+    filter: saturate(1.5) brightness(1.3);
 `
 
 const Card = ({
@@ -197,11 +197,11 @@ const Card = ({
                         {type1}
                     </TypeColor>
                 </TypeBorder>
-                <TypeBorder>
+                {type2==""?null:<TypeBorder>
                     <TypeColor>
                         {type2}
                     </TypeColor>
-                </TypeBorder>
+                </TypeBorder>}
             </TypeCont>
                 <TriangleCont>
                     <TriangleExtension>
