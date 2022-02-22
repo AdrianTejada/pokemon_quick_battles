@@ -52,7 +52,7 @@ const Pokemon2 = styled.div`
 
 const Header = styled.div`
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     margin-top: 20px;
 `
 
@@ -66,6 +66,7 @@ export default function Stadium () {
     const [pokemon1_op, setPoke1O] = useState(1)
     const [pokemon2_op, setPoke2O] = useState(1)
     const [header, setHeader] = useState(null)
+    const [noFight, setFight] = useState(true)
 
     return <Main>
         <React.Fragment/>
@@ -94,7 +95,7 @@ export default function Stadium () {
             }
         </DndProvider>
 
-        {pokemon1 && pokemon2?<FightButtonCont>
+        {pokemon1 && pokemon2 && noFight?<FightButtonCont>
             <FightButton
                 onClick={()=>{
                     setPoke1Pos('-3px')
@@ -117,6 +118,7 @@ export default function Stadium () {
                             },500)
                         } else {
                             setHeader(`Draw!`)
+                            setFight(null)
                         }
                     },2000)
                 }}
@@ -132,6 +134,7 @@ export default function Stadium () {
                         setPoke1O(1)
                         setPoke2O(1)
                         setHeader(null)
+                        setFight(true)
                     }}
                     text="Reset"
                 />
