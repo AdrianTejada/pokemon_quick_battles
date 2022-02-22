@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import { DndProvider } from 'react-dnd';
 import { TouchBackend} from 'react-dnd-touch-backend'
@@ -56,6 +57,18 @@ const Header = styled.div`
     margin-top: 20px;
 `
 
+const HomeButton = styled.div`
+    position: absolute;
+    top: 20px;
+    left: 10px;
+`
+
+const SettingButton = styled.div`
+    position: absolute;
+    top: 20px;
+    right: 10px;
+`
+
 
 
 export default function Stadium () {
@@ -68,9 +81,25 @@ export default function Stadium () {
     const [header, setHeader] = useState(null)
     const [noFight, setFight] = useState(true)
 
+    const router = useRouter()
+
     return <Main>
         <React.Fragment/>
         <Background/>
+
+        <HomeButton>
+            <Button
+                text="Home"
+                onClick={()=>router.push('/')}
+            />
+        </HomeButton>
+
+        <SettingButton>
+            <Button
+                text="Settings"
+                onClick={()=>router.push('/settings')}
+            />
+        </SettingButton>
 
         <DndProvider backend={TouchBackend}
             options={{
