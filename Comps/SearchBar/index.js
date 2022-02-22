@@ -4,8 +4,10 @@ import { useState } from "react";
 import { useProvider } from '@/utils/provider';
 import MiniCard from "../MiniCard";
 import React from "react";
+import DragCont from "../DragCont";
 
 const Cont = styled.div`
+    margin-top: 50px ;
     width: 507px;
     display: flex;
     flex-direction: column;
@@ -39,14 +41,14 @@ const Triangle = styled.div`
 const Data = styled.div`
     min-width: 100%;
     border-radius: 20px;
-    height: 500px;
+    /* height: 500px; */
     background-color: white;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    overflow: scroll;
+    /* overflow: scroll; */
 `
 
 var timer = null;
@@ -86,7 +88,7 @@ export default function SearchBar () {
             setData(result===[]?null:result.data);
             console.log(data)
             timer = null;
-            }, 1000)
+            }, 500)
         }
     }
 
@@ -100,11 +102,11 @@ export default function SearchBar () {
         {data===""?<React.Fragment/>:<DataCont>
             <Triangle/>
             <Data>
-                {data.map((o,i)=><div key={i}>
+                {data.map((o,i)=><DragCont key={i} item={o}>
                         <MiniCard
                             name={o.Name}
                         />
-                    </div>
+                    </DragCont>
                 )}
             </Data>
         </DataCont>}

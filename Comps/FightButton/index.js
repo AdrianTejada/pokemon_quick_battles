@@ -13,11 +13,12 @@ const BattleButton = styled.button`
 
 const FightButton = ({
     bg="linear-gradient(0deg,#884040,#E83838)",
-    text="Fight"
+    text="Fight",
+    onClick=()=>{}
 }) => {
     const router = useRouter()
 
-    return <div>
+    return <div onClick={()=>onClick()}>
         <BattleButton bg={bg}>
             {text}
         </BattleButton>

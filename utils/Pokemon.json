@@ -45,21 +45,6 @@
    "Legendary": false
  },
  {
-   "id": 3,
-   "Name": "VenusaurMega Venusaur",
-   "Type 1": "Grass",
-   "Type 2": "Poison",
-   "Total": 625,
-   "HP": 80,
-   "Attack": 100,
-   "Defense": 123,
-   "Sp. Atk": 122,
-   "Sp. Def": 120,
-   "Speed": 80,
-   "Generation": 1,
-   "Legendary": false
- },
- {
    "id": 4,
    "Name": "Charmander",
    "Type 1": "Fire",
@@ -105,36 +90,6 @@
    "Legendary": false
  },
  {
-   "id": 6,
-   "Name": "CharizardMega Charizard X",
-   "Type 1": "Fire",
-   "Type 2": "Dragon",
-   "Total": 634,
-   "HP": 78,
-   "Attack": 130,
-   "Defense": 111,
-   "Sp. Atk": 130,
-   "Sp. Def": 85,
-   "Speed": 100,
-   "Generation": 1,
-   "Legendary": false
- },
- {
-   "id": 6,
-   "Name": "CharizardMega Charizard Y",
-   "Type 1": "Fire",
-   "Type 2": "Flying",
-   "Total": 634,
-   "HP": 78,
-   "Attack": 104,
-   "Defense": 78,
-   "Sp. Atk": 159,
-   "Sp. Def": 115,
-   "Speed": 100,
-   "Generation": 1,
-   "Legendary": false
- },
- {
    "id": 7,
    "Name": "Squirtle",
    "Type 1": "Water",
@@ -175,21 +130,6 @@
    "Defense": 100,
    "Sp. Atk": 85,
    "Sp. Def": 105,
-   "Speed": 78,
-   "Generation": 1,
-   "Legendary": false
- },
- {
-   "id": 9,
-   "Name": "BlastoiseMega Blastoise",
-   "Type 1": "Water",
-   "Type 2": "",
-   "Total": 630,
-   "HP": 79,
-   "Attack": 103,
-   "Defense": 120,
-   "Sp. Atk": 135,
-   "Sp. Def": 115,
    "Speed": 78,
    "Generation": 1,
    "Legendary": false
@@ -285,21 +225,6 @@
    "Legendary": false
  },
  {
-   "id": 15,
-   "Name": "BeedrillMega Beedrill",
-   "Type 1": "Bug",
-   "Type 2": "Poison",
-   "Total": 495,
-   "HP": 65,
-   "Attack": 150,
-   "Defense": 40,
-   "Sp. Atk": 15,
-   "Sp. Def": 80,
-   "Speed": 145,
-   "Generation": 1,
-   "Legendary": false
- },
- {
    "id": 16,
    "Name": "Pidgey",
    "Type 1": "Normal",
@@ -341,21 +266,6 @@
    "Sp. Atk": 70,
    "Sp. Def": 70,
    "Speed": 101,
-   "Generation": 1,
-   "Legendary": false
- },
- {
-   "id": 18,
-   "Name": "PidgeotMega Pidgeot",
-   "Type 1": "Normal",
-   "Type 2": "Flying",
-   "Total": 579,
-   "HP": 83,
-   "Attack": 80,
-   "Defense": 80,
-   "Sp. Atk": 135,
-   "Sp. Def": 80,
-   "Speed": 121,
    "Generation": 1,
    "Legendary": false
  },
@@ -1065,21 +975,6 @@
    "Legendary": false
  },
  {
-   "id": 65,
-   "Name": "AlakazamMega Alakazam",
-   "Type 1": "Psychic",
-   "Type 2": "",
-   "Total": 590,
-   "HP": 55,
-   "Attack": 50,
-   "Defense": 65,
-   "Sp. Atk": 175,
-   "Sp. Def": 95,
-   "Speed": 150,
-   "Generation": 1,
-   "Legendary": false
- },
- {
    "id": 66,
    "Name": "Machop",
    "Type 1": "Fighting",
@@ -1305,21 +1200,6 @@
    "Legendary": false
  },
  {
-   "id": 80,
-   "Name": "SlowbroMega Slowbro",
-   "Type 1": "Water",
-   "Type 2": "Psychic",
-   "Total": 590,
-   "HP": 95,
-   "Attack": 75,
-   "Defense": 180,
-   "Sp. Atk": 130,
-   "Sp. Def": 80,
-   "Speed": 30,
-   "Generation": 1,
-   "Legendary": false
- },
- {
    "id": 81,
    "Name": "Magnemite",
    "Type 1": "Electric",
@@ -1526,21 +1406,6 @@
    "Sp. Atk": 130,
    "Sp. Def": 75,
    "Speed": 110,
-   "Generation": 1,
-   "Legendary": false
- },
- {
-   "id": 94,
-   "Name": "GengarMega Gengar",
-   "Type 1": "Ghost",
-   "Type 2": "Poison",
-   "Total": 600,
-   "HP": 60,
-   "Attack": 65,
-   "Defense": 80,
-   "Sp. Atk": 170,
-   "Sp. Def": 95,
-   "Speed": 130,
    "Generation": 1,
    "Legendary": false
  },
@@ -1860,21 +1725,6 @@
    "Legendary": false
  },
  {
-   "id": 115,
-   "Name": "KangaskhanMega Kangaskhan",
-   "Type 1": "Normal",
-   "Type 2": "",
-   "Total": 590,
-   "HP": 105,
-   "Attack": 125,
-   "Defense": 100,
-   "Sp. Atk": 60,
-   "Sp. Def": 100,
-   "Speed": 100,
-   "Generation": 1,
-   "Legendary": false
- },
- {
    "id": 116,
    "Name": "Horsea",
    "Type 1": "Water",
@@ -2055,21 +1905,6 @@
    "Legendary": false
  },
  {
-   "id": 127,
-   "Name": "PinsirMega Pinsir",
-   "Type 1": "Bug",
-   "Type 2": "Flying",
-   "Total": 600,
-   "HP": 65,
-   "Attack": 155,
-   "Defense": 120,
-   "Sp. Atk": 65,
-   "Sp. Def": 90,
-   "Speed": 105,
-   "Generation": 1,
-   "Legendary": false
- },
- {
    "id": 128,
    "Name": "Tauros",
    "Type 1": "Normal",
@@ -2110,21 +1945,6 @@
    "Defense": 79,
    "Sp. Atk": 60,
    "Sp. Def": 100,
-   "Speed": 81,
-   "Generation": 1,
-   "Legendary": false
- },
- {
-   "id": 130,
-   "Name": "GyaradosMega Gyarados",
-   "Type 1": "Water",
-   "Type 2": "Dark",
-   "Total": 640,
-   "HP": 95,
-   "Attack": 155,
-   "Defense": 109,
-   "Sp. Atk": 70,
-   "Sp. Def": 130,
    "Speed": 81,
    "Generation": 1,
    "Legendary": false
@@ -2308,22 +2128,7 @@
    "Speed": 130,
    "Generation": 1,
    "Legendary": false
- },
- {
-   "id": 142,
-   "Name": "AerodactylMega Aerodactyl",
-   "Type 1": "Rock",
-   "Type 2": "Flying",
-   "Total": 615,
-   "HP": 80,
-   "Attack": 135,
-   "Defense": 85,
-   "Sp. Atk": 70,
-   "Sp. Def": 95,
-   "Speed": 150,
-   "Generation": 1,
-   "Legendary": false
- },
+ }, 
  {
    "id": 143,
    "Name": "Snorlax",
@@ -2441,36 +2246,6 @@
    "Sp. Atk": 154,
    "Sp. Def": 90,
    "Speed": 130,
-   "Generation": 1,
-   "Legendary": true
- },
- {
-   "id": 150,
-   "Name": "MewtwoMega Mewtwo X",
-   "Type 1": "Psychic",
-   "Type 2": "Fighting",
-   "Total": 780,
-   "HP": 106,
-   "Attack": 190,
-   "Defense": 100,
-   "Sp. Atk": 154,
-   "Sp. Def": 100,
-   "Speed": 130,
-   "Generation": 1,
-   "Legendary": true
- },
- {
-   "id": 150,
-   "Name": "MewtwoMega Mewtwo Y",
-   "Type 1": "Psychic",
-   "Type 2": "",
-   "Total": 780,
-   "HP": 106,
-   "Attack": 150,
-   "Defense": 70,
-   "Sp. Atk": 194,
-   "Sp. Def": 120,
-   "Speed": 140,
    "Generation": 1,
    "Legendary": true
  },
@@ -2940,21 +2715,6 @@
    "Legendary": false
  },
  {
-   "id": 181,
-   "Name": "AmpharosMega Ampharos",
-   "Type 1": "Electric",
-   "Type 2": "Dragon",
-   "Total": 610,
-   "HP": 90,
-   "Attack": 95,
-   "Defense": 105,
-   "Sp. Atk": 165,
-   "Sp. Def": 110,
-   "Speed": 45,
-   "Generation": 2,
-   "Legendary": false
- },
- {
    "id": 182,
    "Name": "Bellossom",
    "Type 1": "Grass",
@@ -3360,21 +3120,6 @@
    "Legendary": false
  },
  {
-   "id": 208,
-   "Name": "SteelixMega Steelix",
-   "Type 1": "Steel",
-   "Type 2": "Ground",
-   "Total": 610,
-   "HP": 75,
-   "Attack": 125,
-   "Defense": 230,
-   "Sp. Atk": 55,
-   "Sp. Def": 95,
-   "Speed": 30,
-   "Generation": 2,
-   "Legendary": false
- },
- {
    "id": 209,
    "Name": "Snubbull",
    "Type 1": "Fairy",
@@ -3435,21 +3180,6 @@
    "Legendary": false
  },
  {
-   "id": 212,
-   "Name": "ScizorMega Scizor",
-   "Type 1": "Bug",
-   "Type 2": "Steel",
-   "Total": 600,
-   "HP": 70,
-   "Attack": 150,
-   "Defense": 140,
-   "Sp. Atk": 65,
-   "Sp. Def": 100,
-   "Speed": 75,
-   "Generation": 2,
-   "Legendary": false
- },
- {
    "id": 213,
    "Name": "Shuckle",
    "Type 1": "Bug",
@@ -3476,21 +3206,6 @@
    "Sp. Atk": 40,
    "Sp. Def": 95,
    "Speed": 85,
-   "Generation": 2,
-   "Legendary": false
- },
- {
-   "id": 214,
-   "Name": "HeracrossMega Heracross",
-   "Type 1": "Bug",
-   "Type 2": "Fighting",
-   "Total": 600,
-   "HP": 80,
-   "Attack": 185,
-   "Defense": 115,
-   "Sp. Atk": 40,
-   "Sp. Def": 105,
-   "Speed": 75,
    "Generation": 2,
    "Legendary": false
  },
@@ -3716,21 +3431,6 @@
    "Sp. Atk": 110,
    "Sp. Def": 80,
    "Speed": 95,
-   "Generation": 2,
-   "Legendary": false
- },
- {
-   "id": 229,
-   "Name": "HoundoomMega Houndoom",
-   "Type 1": "Dark",
-   "Type 2": "Fire",
-   "Total": 600,
-   "HP": 75,
-   "Attack": 90,
-   "Defense": 90,
-   "Sp. Atk": 140,
-   "Sp. Def": 90,
-   "Speed": 115,
    "Generation": 2,
    "Legendary": false
  },
@@ -4020,21 +3720,6 @@
    "Legendary": false
  },
  {
-   "id": 248,
-   "Name": "TyranitarMega Tyranitar",
-   "Type 1": "Rock",
-   "Type 2": "Dark",
-   "Total": 700,
-   "HP": 100,
-   "Attack": 164,
-   "Defense": 150,
-   "Sp. Atk": 95,
-   "Sp. Def": 120,
-   "Speed": 71,
-   "Generation": 2,
-   "Legendary": false
- },
- {
    "id": 249,
    "Name": "Lugia",
    "Type 1": "Psychic",
@@ -4125,21 +3810,6 @@
    "Legendary": false
  },
  {
-   "id": 254,
-   "Name": "SceptileMega Sceptile",
-   "Type 1": "Grass",
-   "Type 2": "Dragon",
-   "Total": 630,
-   "HP": 70,
-   "Attack": 110,
-   "Defense": 75,
-   "Sp. Atk": 145,
-   "Sp. Def": 85,
-   "Speed": 145,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 255,
    "Name": "Torchic",
    "Type 1": "Fire",
@@ -4185,21 +3855,6 @@
    "Legendary": false
  },
  {
-   "id": 257,
-   "Name": "BlazikenMega Blaziken",
-   "Type 1": "Fire",
-   "Type 2": "Fighting",
-   "Total": 630,
-   "HP": 80,
-   "Attack": 160,
-   "Defense": 80,
-   "Sp. Atk": 130,
-   "Sp. Def": 80,
-   "Speed": 100,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 258,
    "Name": "Mudkip",
    "Type 1": "Water",
@@ -4241,21 +3896,6 @@
    "Sp. Atk": 85,
    "Sp. Def": 90,
    "Speed": 60,
-   "Generation": 3,
-   "Legendary": false
- },
- {
-   "id": 260,
-   "Name": "SwampertMega Swampert",
-   "Type 1": "Water",
-   "Type 2": "Ground",
-   "Total": 635,
-   "HP": 100,
-   "Attack": 150,
-   "Defense": 110,
-   "Sp. Atk": 95,
-   "Sp. Def": 110,
-   "Speed": 70,
    "Generation": 3,
    "Legendary": false
  },
@@ -4590,21 +4230,6 @@
    "Legendary": false
  },
  {
-   "id": 282,
-   "Name": "GardevoirMega Gardevoir",
-   "Type 1": "Psychic",
-   "Type 2": "Fairy",
-   "Total": 618,
-   "HP": 68,
-   "Attack": 85,
-   "Defense": 65,
-   "Sp. Atk": 165,
-   "Sp. Def": 135,
-   "Speed": 100,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 283,
    "Name": "Surskit",
    "Type 1": "Bug",
@@ -4905,21 +4530,6 @@
    "Legendary": false
  },
  {
-   "id": 302,
-   "Name": "SableyeMega Sableye",
-   "Type 1": "Dark",
-   "Type 2": "Ghost",
-   "Total": 480,
-   "HP": 50,
-   "Attack": 85,
-   "Defense": 125,
-   "Sp. Atk": 85,
-   "Sp. Def": 115,
-   "Speed": 20,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 303,
    "Name": "Mawile",
    "Type 1": "Steel",
@@ -4930,21 +4540,6 @@
    "Defense": 85,
    "Sp. Atk": 55,
    "Sp. Def": 55,
-   "Speed": 50,
-   "Generation": 3,
-   "Legendary": false
- },
- {
-   "id": 303,
-   "Name": "MawileMega Mawile",
-   "Type 1": "Steel",
-   "Type 2": "Fairy",
-   "Total": 480,
-   "HP": 50,
-   "Attack": 105,
-   "Defense": 125,
-   "Sp. Atk": 55,
-   "Sp. Def": 95,
    "Speed": 50,
    "Generation": 3,
    "Legendary": false
@@ -4995,21 +4590,6 @@
    "Legendary": false
  },
  {
-   "id": 306,
-   "Name": "AggronMega Aggron",
-   "Type 1": "Steel",
-   "Type 2": "",
-   "Total": 630,
-   "HP": 70,
-   "Attack": 140,
-   "Defense": 230,
-   "Sp. Atk": 60,
-   "Sp. Def": 80,
-   "Speed": 50,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 307,
    "Name": "Meditite",
    "Type 1": "Fighting",
@@ -5040,21 +4620,6 @@
    "Legendary": false
  },
  {
-   "id": 308,
-   "Name": "MedichamMega Medicham",
-   "Type 1": "Fighting",
-   "Type 2": "Psychic",
-   "Total": 510,
-   "HP": 60,
-   "Attack": 100,
-   "Defense": 85,
-   "Sp. Atk": 80,
-   "Sp. Def": 85,
-   "Speed": 100,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 309,
    "Name": "Electrike",
    "Type 1": "Electric",
@@ -5081,21 +4646,6 @@
    "Sp. Atk": 105,
    "Sp. Def": 60,
    "Speed": 105,
-   "Generation": 3,
-   "Legendary": false
- },
- {
-   "id": 310,
-   "Name": "ManectricMega Manectric",
-   "Type 1": "Electric",
-   "Type 2": "",
-   "Total": 575,
-   "HP": 70,
-   "Attack": 75,
-   "Defense": 80,
-   "Sp. Atk": 135,
-   "Sp. Def": 80,
-   "Speed": 135,
    "Generation": 3,
    "Legendary": false
  },
@@ -5235,21 +4785,6 @@
    "Legendary": false
  },
  {
-   "id": 319,
-   "Name": "SharpedoMega Sharpedo",
-   "Type 1": "Water",
-   "Type 2": "Dark",
-   "Total": 560,
-   "HP": 70,
-   "Attack": 140,
-   "Defense": 70,
-   "Sp. Atk": 110,
-   "Sp. Def": 65,
-   "Speed": 105,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 320,
    "Name": "Wailmer",
    "Type 1": "Water",
@@ -5306,21 +4841,6 @@
    "Sp. Atk": 105,
    "Sp. Def": 75,
    "Speed": 40,
-   "Generation": 3,
-   "Legendary": false
- },
- {
-   "id": 323,
-   "Name": "CameruptMega Camerupt",
-   "Type 1": "Fire",
-   "Type 2": "Ground",
-   "Total": 560,
-   "HP": 70,
-   "Attack": 120,
-   "Defense": 100,
-   "Sp. Atk": 145,
-   "Sp. Def": 105,
-   "Speed": 20,
    "Generation": 3,
    "Legendary": false
  },
@@ -5484,21 +5004,6 @@
    "Attack": 70,
    "Defense": 90,
    "Sp. Atk": 70,
-   "Sp. Def": 105,
-   "Speed": 80,
-   "Generation": 3,
-   "Legendary": false
- },
- {
-   "id": 334,
-   "Name": "AltariaMega Altaria",
-   "Type 1": "Dragon",
-   "Type 2": "Fairy",
-   "Total": 590,
-   "HP": 75,
-   "Attack": 110,
-   "Defense": 110,
-   "Sp. Atk": 110,
    "Sp. Def": 105,
    "Speed": 80,
    "Generation": 3,
@@ -5805,21 +5310,6 @@
    "Legendary": false
  },
  {
-   "id": 354,
-   "Name": "BanetteMega Banette",
-   "Type 1": "Ghost",
-   "Type 2": "",
-   "Total": 555,
-   "HP": 64,
-   "Attack": 165,
-   "Defense": 75,
-   "Sp. Atk": 93,
-   "Sp. Def": 83,
-   "Speed": 75,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 355,
    "Name": "Duskull",
    "Type 1": "Ghost",
@@ -5895,21 +5385,6 @@
    "Legendary": false
  },
  {
-   "id": 359,
-   "Name": "AbsolMega Absol",
-   "Type 1": "Dark",
-   "Type 2": "",
-   "Total": 565,
-   "HP": 65,
-   "Attack": 150,
-   "Defense": 60,
-   "Sp. Atk": 115,
-   "Sp. Def": 60,
-   "Speed": 115,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 360,
    "Name": "Wynaut",
    "Type 1": "Psychic",
@@ -5951,21 +5426,6 @@
    "Sp. Atk": 80,
    "Sp. Def": 80,
    "Speed": 80,
-   "Generation": 3,
-   "Legendary": false
- },
- {
-   "id": 362,
-   "Name": "GlalieMega Glalie",
-   "Type 1": "Ice",
-   "Type 2": "",
-   "Total": 580,
-   "HP": 80,
-   "Attack": 120,
-   "Defense": 80,
-   "Sp. Atk": 120,
-   "Sp. Def": 80,
-   "Speed": 100,
    "Generation": 3,
    "Legendary": false
  },
@@ -6135,21 +5595,6 @@
    "Legendary": false
  },
  {
-   "id": 373,
-   "Name": "SalamenceMega Salamence",
-   "Type 1": "Dragon",
-   "Type 2": "Flying",
-   "Total": 700,
-   "HP": 95,
-   "Attack": 145,
-   "Defense": 130,
-   "Sp. Atk": 120,
-   "Sp. Def": 90,
-   "Speed": 120,
-   "Generation": 3,
-   "Legendary": false
- },
- {
    "id": 374,
    "Name": "Beldum",
    "Type 1": "Steel",
@@ -6191,21 +5636,6 @@
    "Sp. Atk": 95,
    "Sp. Def": 90,
    "Speed": 70,
-   "Generation": 3,
-   "Legendary": false
- },
- {
-   "id": 376,
-   "Name": "MetagrossMega Metagross",
-   "Type 1": "Steel",
-   "Type 2": "Psychic",
-   "Total": 700,
-   "HP": 80,
-   "Attack": 145,
-   "Defense": 150,
-   "Sp. Atk": 105,
-   "Sp. Def": 110,
-   "Speed": 110,
    "Generation": 3,
    "Legendary": false
  },
@@ -6270,21 +5700,6 @@
    "Legendary": true
  },
  {
-   "id": 380,
-   "Name": "LatiasMega Latias",
-   "Type 1": "Dragon",
-   "Type 2": "Psychic",
-   "Total": 700,
-   "HP": 80,
-   "Attack": 100,
-   "Defense": 120,
-   "Sp. Atk": 140,
-   "Sp. Def": 150,
-   "Speed": 110,
-   "Generation": 3,
-   "Legendary": true
- },
- {
    "id": 381,
    "Name": "Latios",
    "Type 1": "Dragon",
@@ -6295,21 +5710,6 @@
    "Defense": 80,
    "Sp. Atk": 130,
    "Sp. Def": 110,
-   "Speed": 110,
-   "Generation": 3,
-   "Legendary": true
- },
- {
-   "id": 381,
-   "Name": "LatiosMega Latios",
-   "Type 1": "Dragon",
-   "Type 2": "Psychic",
-   "Total": 700,
-   "HP": 80,
-   "Attack": 130,
-   "Defense": 100,
-   "Sp. Atk": 160,
-   "Sp. Def": 120,
    "Speed": 110,
    "Generation": 3,
    "Legendary": true
@@ -6390,21 +5790,6 @@
    "Legendary": true
  },
  {
-   "id": 384,
-   "Name": "RayquazaMega Rayquaza",
-   "Type 1": "Dragon",
-   "Type 2": "Flying",
-   "Total": 780,
-   "HP": 105,
-   "Attack": 180,
-   "Defense": 100,
-   "Sp. Atk": 180,
-   "Sp. Def": 100,
-   "Speed": 115,
-   "Generation": 3,
-   "Legendary": true
- },
- {
    "id": 385,
    "Name": "Jirachi",
    "Type 1": "Steel",
@@ -6421,7 +5806,7 @@
  },
  {
    "id": 386,
-   "Name": "DeoxysNormal Forme",
+   "Name": "Deoxys-Normal",
    "Type 1": "Psychic",
    "Type 2": "",
    "Total": 600,
@@ -6436,7 +5821,7 @@
  },
  {
    "id": 386,
-   "Name": "DeoxysAttack Forme",
+   "Name": "Deoxys-Attack",
    "Type 1": "Psychic",
    "Type 2": "",
    "Total": 600,
@@ -6451,7 +5836,7 @@
  },
  {
    "id": 386,
-   "Name": "DeoxysDefense Forme",
+   "Name": "Deoxys-Defense",
    "Type 1": "Psychic",
    "Type 2": "",
    "Total": 600,
@@ -6466,7 +5851,7 @@
  },
  {
    "id": 386,
-   "Name": "DeoxysSpeed Forme",
+   "Name": "Deoxys-Speed",
    "Type 1": "Psychic",
    "Type 2": "",
    "Total": 600,
@@ -7140,21 +6525,6 @@
    "Legendary": false
  },
  {
-   "id": 428,
-   "Name": "LopunnyMega Lopunny",
-   "Type 1": "Normal",
-   "Type 2": "Fighting",
-   "Total": 580,
-   "HP": 65,
-   "Attack": 136,
-   "Defense": 94,
-   "Sp. Atk": 54,
-   "Sp. Def": 96,
-   "Speed": 135,
-   "Generation": 4,
-   "Legendary": false
- },
- {
    "id": 429,
    "Name": "Mismagius",
    "Type 1": "Ghost",
@@ -7410,21 +6780,6 @@
    "Legendary": false
  },
  {
-   "id": 445,
-   "Name": "GarchompMega Garchomp",
-   "Type 1": "Dragon",
-   "Type 2": "Ground",
-   "Total": 700,
-   "HP": 108,
-   "Attack": 170,
-   "Defense": 115,
-   "Sp. Atk": 120,
-   "Sp. Def": 95,
-   "Speed": 92,
-   "Generation": 4,
-   "Legendary": false
- },
- {
    "id": 446,
    "Name": "Munchlax",
    "Type 1": "Normal",
@@ -7466,21 +6821,6 @@
    "Sp. Atk": 115,
    "Sp. Def": 70,
    "Speed": 90,
-   "Generation": 4,
-   "Legendary": false
- },
- {
-   "id": 448,
-   "Name": "LucarioMega Lucario",
-   "Type 1": "Fighting",
-   "Type 2": "Steel",
-   "Total": 625,
-   "HP": 70,
-   "Attack": 145,
-   "Defense": 88,
-   "Sp. Atk": 140,
-   "Sp. Def": 70,
-   "Speed": 112,
    "Generation": 4,
    "Legendary": false
  },
@@ -7661,21 +7001,6 @@
    "Sp. Atk": 92,
    "Sp. Def": 85,
    "Speed": 60,
-   "Generation": 4,
-   "Legendary": false
- },
- {
-   "id": 460,
-   "Name": "AbomasnowMega Abomasnow",
-   "Type 1": "Grass",
-   "Type 2": "Ice",
-   "Total": 594,
-   "HP": 90,
-   "Attack": 132,
-   "Defense": 105,
-   "Sp. Atk": 132,
-   "Sp. Def": 105,
-   "Speed": 30,
    "Generation": 4,
    "Legendary": false
  },
@@ -7901,21 +7226,6 @@
    "Sp. Atk": 65,
    "Sp. Def": 115,
    "Speed": 80,
-   "Generation": 4,
-   "Legendary": false
- },
- {
-   "id": 475,
-   "Name": "GalladeMega Gallade",
-   "Type 1": "Psychic",
-   "Type 2": "Fighting",
-   "Total": 618,
-   "HP": 68,
-   "Attack": 165,
-   "Defense": 95,
-   "Sp. Atk": 65,
-   "Sp. Def": 115,
-   "Speed": 110,
    "Generation": 4,
    "Legendary": false
  },
@@ -8860,21 +8170,6 @@
    "Defense": 86,
    "Sp. Atk": 60,
    "Sp. Def": 86,
-   "Speed": 50,
-   "Generation": 5,
-   "Legendary": false
- },
- {
-   "id": 531,
-   "Name": "AudinoMega Audino",
-   "Type 1": "Normal",
-   "Type 2": "Fairy",
-   "Total": 545,
-   "HP": 103,
-   "Attack": 60,
-   "Defense": 126,
-   "Sp. Atk": 80,
-   "Sp. Def": 126,
    "Speed": 50,
    "Generation": 5,
    "Legendary": false
@@ -11936,21 +11231,6 @@
    "Sp. Atk": 100,
    "Sp. Def": 150,
    "Speed": 50,
-   "Generation": 6,
-   "Legendary": true
- },
- {
-   "id": 719,
-   "Name": "DiancieMega Diancie",
-   "Type 1": "Rock",
-   "Type 2": "Fairy",
-   "Total": 700,
-   "HP": 50,
-   "Attack": 160,
-   "Defense": 110,
-   "Sp. Atk": 160,
-   "Sp. Def": 110,
-   "Speed": 110,
    "Generation": 6,
    "Legendary": true
  },

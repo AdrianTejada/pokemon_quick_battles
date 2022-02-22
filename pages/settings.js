@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 import { Background } from "@/Comps/Background";
 import  SettingsCard  from "@/Comps/SettingsCard";
-import Button from "@/Comps/Button";
 
 const Main = styled.div`
     width: 100vw;

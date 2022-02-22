@@ -6,7 +6,7 @@ const Cont = styled.div`
     width: 440px;
     margin-bottom: -437px;
     position: relative;
-    left: 50px;
+    /* left: 50px; */
 `
 const ClearCont = styled.div`
     width: 440px;
@@ -28,7 +28,6 @@ const PictureCont = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: contrast(1);
 `
 
 const Triangle = styled.div`
@@ -135,6 +134,7 @@ const PokeImage = styled.img`
     min-height: 300px;
     filter: contrast(150%);
     image-rendering: pixelated;
+    filter: saturate(1.5) brightness(1.3);
 `
 
 const Card = ({
@@ -146,7 +146,8 @@ const Card = ({
     atk=49,
     def=49,
     sp_atk=65,
-    sp_def=65
+    sp_def=65,
+    speed=45
 }) => {
     const data = [
         {
@@ -174,6 +175,11 @@ const Card = ({
           A: parseInt(sp_def),
           fullMark: 167,
         },
+        {
+            subject: 'Speed',
+            A: parseInt(speed),
+            fullMark: 180
+        }
       ];
     return <Cont>
             <PictureCont>
@@ -191,11 +197,11 @@ const Card = ({
                         {type1}
                     </TypeColor>
                 </TypeBorder>
-                <TypeBorder>
+                {type2==""?null:<TypeBorder>
                     <TypeColor>
                         {type2}
                     </TypeColor>
-                </TypeBorder>
+                </TypeBorder>}
             </TypeCont>
                 <TriangleCont>
                     <TriangleExtension>
