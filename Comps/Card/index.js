@@ -6,7 +6,7 @@ const Cont = styled.div`
     width: 440px;
     margin-bottom: -437px;
     position: relative;
-    left: 50px;
+    /* left: 50px; */
 `
 const ClearCont = styled.div`
     width: 440px;
@@ -28,7 +28,6 @@ const PictureCont = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: contrast(1);
 `
 
 const Triangle = styled.div`
@@ -135,6 +134,7 @@ const PokeImage = styled.img`
     min-height: 300px;
     filter: contrast(150%);
     image-rendering: pixelated;
+    filter: saturate(1.4) brightness(1.1);
 `
 
 const Card = ({
