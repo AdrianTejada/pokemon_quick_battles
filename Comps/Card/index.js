@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { useProvider } from "@/utils/provider";
+import { card } from '../variable'
+import { triangle } from "../variable";
+import { triangleex } from "../variable";
+import { clear } from "../variable";
 
 
 const Cont = styled.div`
@@ -17,7 +22,7 @@ const ClearCont = styled.div`
     align-items: center;
     border-radius: 20px;
     opacity: 0.22;
-    background-color: #181818;
+    background-color:${props=>props.clearcont}
     backdrop-filter: blur(10px);
 `
 
@@ -33,7 +38,7 @@ const PictureCont = styled.div`
 const Triangle = styled.div`
     border-style: solid;
     border-width: 0 46px 80px 46px;
-    border-color: transparent transparent #FF6161 transparent;
+    border-color: transparent transparent #6B7DBC transparent;
     position: relative;
     right: 46px;
 `
@@ -41,7 +46,7 @@ const Triangle = styled.div`
 const TriangleExtension = styled.div`
     width: 110px;
     height: 80px;
-    background-color: #FF6161;
+    background-color:${props=>props.triex};
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -147,7 +152,8 @@ const Card = ({
     def=49,
     sp_atk=65,
     sp_def=65,
-    speed=45
+    speed=45,
+    cardtheme=card
 }) => {
     const data = [
         {
@@ -181,11 +187,14 @@ const Card = ({
             fullMark: 180
         }
       ];
+
+      const{theme} = useProvider();
+
     return <Cont>
             <PictureCont>
                 <PokeImage src={`https://img.pokemondb.net/sprites/x-y/normal/${name.toLowerCase()}.png`}/>
             </PictureCont>
-        <ClearCont>
+        <ClearCont clearcont={clear[theme]}>
 
         </ClearCont>
 
@@ -203,8 +212,8 @@ const Card = ({
                     </TypeColor>
                 </TypeBorder>}
             </TypeCont>
-                <TriangleCont>
-                    <TriangleExtension>
+                <TriangleCont tri={triangle[theme]}>
+                    <TriangleExtension triex={triangleex[theme]}>
                         <TriangleText>
                             {number}
                         </TriangleText>
@@ -217,7 +226,7 @@ const Card = ({
                     </BannerText>
                 </Banner>
             </BannerCont>
-            <Data bg={'white'}> {/* // gray for dark mode */}
+            <Data bg={card[theme]}>
             <ResponsiveContainer width="100%" height="100%" >
                     <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
                         <PolarGrid/> // grid: ;

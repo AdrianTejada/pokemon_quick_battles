@@ -20,8 +20,6 @@ const ImageCont = styled.div`
     object-fit: cover;
 `
 
-
-
 export const Background = () => {
     return <Cont>
         <ImageCont>

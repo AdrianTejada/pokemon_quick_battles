@@ -4,6 +4,7 @@ import styled from "styled-components"
 import logo from '@/public/assets/logo.png'
 import Image from "next/image"
 import Button from "@/Comps/Button"
+import SettingsButton from "@/Comps/SettingButton"
 import { useRouter } from "next/router"
 
 const Main = styled.div`
@@ -32,11 +33,11 @@ export default function Home() {
     src={logo}
     />
     <ButtonCont>
-      <Button
+    <Button
         text="Start!"
         onClick={()=>router.push('/stadium')}
       />
-      <Button
+      <SettingsButton
         text="Settings"
         onClick={()=>router.push('/settings')}
       />
