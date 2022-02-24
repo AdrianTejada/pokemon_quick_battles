@@ -30,6 +30,7 @@ export default function Home() {
   return <Main>
     <Background/> 
   <Image
+  alt="Logo"
     src={logo}
     />
     <ButtonCont>
