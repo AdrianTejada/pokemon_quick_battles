@@ -25,7 +25,7 @@ export const Background = () => {
     const {theme} = useProvider()
     return <Cont>
         <ImageCont>
-            <Image src={theme==='default'?day:night} style={{width: '100%', height: '100vh', objectFit: 'cover'}}/>
+            <Image alt={'The Image'} src={theme==='default'?day:night} style={{width: '100%', height: '100vh', objectFit: 'cover'}}/>
         </ImageCont>
 </Cont>
 }
