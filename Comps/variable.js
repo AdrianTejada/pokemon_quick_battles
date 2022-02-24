@@ -52,3 +52,8 @@ export const circle = {
     default:"#FF0909",
     dark:"#3480D9"
 }
+
+export const placeholder = {
+    default: '#181818',
+    dark: '#FFFFFF'
+}

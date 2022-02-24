@@ -22,8 +22,9 @@ const ClearCont = styled.div`
     align-items: center;
     border-radius: 20px;
     opacity: 0.22;
-    background-color:${props=>props.clearcont}
+    background-color:${props=>props.clearcont};
     backdrop-filter: blur(10px);
+    z-index: -1;
 `
 
 const PictureCont = styled.div`
@@ -38,7 +39,7 @@ const PictureCont = styled.div`
 const Triangle = styled.div`
     border-style: solid;
     border-width: 0 46px 80px 46px;
-    border-color: transparent transparent #6B7DBC transparent;
+    border-color: transparent transparent ${props=>props.tri} transparent;
     position: relative;
     right: 46px;
 `
@@ -191,12 +192,11 @@ const Card = ({
       const{theme} = useProvider();
 
     return <Cont>
+            <ClearCont clearcont={clear[theme]}/>
             <PictureCont>
                 <PokeImage src={`https://img.pokemondb.net/sprites/x-y/normal/${name.toLowerCase()}.png`}/>
             </PictureCont>
-        <ClearCont clearcont={clear[theme]}>
 
-        </ClearCont>
 
         <DataCont>
             <BannerCont>
@@ -218,7 +218,7 @@ const Card = ({
                             {number}
                         </TriangleText>
                     </TriangleExtension>
-                    <Triangle/>
+                    <Triangle tri={triangleex[theme]}/>
                 </TriangleCont>
                 <Banner>
                     <BannerText>

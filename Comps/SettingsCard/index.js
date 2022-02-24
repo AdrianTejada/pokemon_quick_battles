@@ -4,6 +4,7 @@ import { settingbg } from "../variable";
 import { checktext } from "../variable";
 import { themetext } from "../variable";
 import { circle } from "../variable";
+import { card } from "../variable";
 
 const MainCont = styled.div`
     min-width: 384px;
@@ -14,7 +15,7 @@ const MainCont = styled.div`
 const Opacity = styled.div`
     min-width: 100%;
     min-height: 348px;
-    opacity: 0.22;
+    /* opacity: 0.22; */
     background-color: ${props=>props.settingbackground};
     backdrop-filter: blur(10px);
     border-radius: 25px;
@@ -34,7 +35,7 @@ const Cont = styled.div`
 const Line = styled.div`
     min-width: 366px;
     height: 1px;
-    background-color: white;
+    background-color: ${props=>props.bg};
 `
 
 const SubCont = styled.div`
@@ -123,7 +124,7 @@ export default function SettingsCard ({
         show_legendaries, setLegend
     } = useProvider()
     return <MainCont>
-        <Opacity settingbackground={bgsetting[theme]}/>
+        <Opacity settingbackground={card[theme]}/>
         <Cont>
             <SubCont onClick={()=>setTheme(theme==='default'?'dark':'default')}>
                 <Text themetxcolour={maintext[theme]}>
@@ -133,7 +134,7 @@ export default function SettingsCard ({
                     <Circle top={theme==="default"?'-11px':'11px'} circlehue={circlecolour[theme]}/>
                 </Bar>
             </SubCont>
-            <Line/>
+            <Line bg={themetext[theme]}/>
                 <GenCont>
                     <Row>
                         <Check onClick={()=>setGen1(gen1==1?false:1)}>
@@ -194,7 +195,7 @@ export default function SettingsCard ({
                         </Check>
                     </Row>
                 </GenCont>
-            <Line/>
+            <Line bg={themetext[theme]}/>
             <SubCont style={{justifyContent: 'center'}} onClick={()=>setLegend(show_legendaries==false?true:false)}>
                     <CheckBox type='checkbox'
                         checked={show_legendaries}

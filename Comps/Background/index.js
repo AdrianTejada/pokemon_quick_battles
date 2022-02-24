@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import night from "@/public/bg/dark.png"
 import day from '@/public/bg/light.png'
+import { useProvider } from "@/utils/provider"
 
 import Image from "next/image"
 
@@ -21,9 +22,10 @@ const ImageCont = styled.div`
 `
 
 export const Background = () => {
+    const {theme} = useProvider()
     return <Cont>
         <ImageCont>
-            <Image src={day} style={{width: '100%', height: '100vh', objectFit: 'cover'}}/>
+            <Image src={theme==='default'?day:night} style={{width: '100%', height: '100vh', objectFit: 'cover'}}/>
         </ImageCont>
 </Cont>
 }
