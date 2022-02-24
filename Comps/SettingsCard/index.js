@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import { useProvider } from "@/utils/provider";
+import { settingbg } from "../variable";
+import { checktext } from "../variable";
+import { themetext } from "../variable";
+import { circle } from "../variable";
+import { card } from "../variable";
 
 const MainCont = styled.div`
     min-width: 384px;
@@ -10,8 +15,8 @@ const MainCont = styled.div`
 const Opacity = styled.div`
     min-width: 100%;
     min-height: 348px;
-    opacity: 0.22;
-    background-color: #181818;
+    /* opacity: 0.22; */
+    background-color: ${props=>props.settingbackground};
     backdrop-filter: blur(10px);
     border-radius: 25px;
 `
@@ -30,7 +35,7 @@ const Cont = styled.div`
 const Line = styled.div`
     min-width: 366px;
     height: 1px;
-    background-color: white;
+    background-color: ${props=>props.bg};
 `
 
 const SubCont = styled.div`
@@ -66,12 +71,12 @@ const Check = styled.div`
 
 const Text = styled.div`
     font-size: 21px;
-    color: white;
+    color: ${props=>props.themetxcolour};
 `
 
 const CheckText = styled.div`
     font-size: 16px;
-    color: white;
+    color: ${props=>props.textcolour};
     position: relative;
     bottom: 2px;
 `
@@ -96,13 +101,18 @@ const Circle = styled.div`
     top: ${props=>props.top};
     min-width: 20px;
     min-height: 20px;
-    background-color: #3480D9;
+    background-color: ${props=>props.circlehue};
     border-radius: 50%;
     transition: top .5s;
 `
 
 
-export default function SettingsCard () {
+export default function SettingsCard ({
+    bgsetting=settingbg,
+    checkcolour=checktext,
+    maintext=themetext,
+    circlecolour=circle
+}) {
     const {
         theme, setTheme,
         gen1, setGen1,
@@ -114,17 +124,17 @@ export default function SettingsCard () {
         show_legendaries, setLegend
     } = useProvider()
     return <MainCont>
-        <Opacity/>
+        <Opacity settingbackground={card[theme]}/>
         <Cont>
             <SubCont onClick={()=>setTheme(theme==='default'?'dark':'default')}>
-                <Text>
+                <Text themetxcolour={maintext[theme]}>
                     Default Theme
                 </Text>
                 <Bar>
-                    <Circle top={theme==="default"?'-11px':'11px'}/>
+                    <Circle top={theme==="default"?'-11px':'11px'} circlehue={circlecolour[theme]}/>
                 </Bar>
             </SubCont>
-            <Line/>
+            <Line bg={themetext[theme]}/>
                 <GenCont>
                     <Row>
                         <Check onClick={()=>setGen1(gen1==1?false:1)}>
@@ -132,7 +142,7 @@ export default function SettingsCard () {
                                 type='checkbox'
                                 checked={gen1==1?true:false}
                             />
-                            <CheckText>
+                            <CheckText textcolour={checkcolour[theme]}>
                                 Gen 1
                             </CheckText>
                         </Check>
@@ -141,7 +151,7 @@ export default function SettingsCard () {
                                 type='checkbox'
                                 checked={gen2==2?true:false}
                             />
-                            <CheckText>
+                            <CheckText textcolour={checkcolour[theme]}>
                                 Gen 2
                             </CheckText>
                         </Check>
@@ -150,7 +160,7 @@ export default function SettingsCard () {
                                 type='checkbox'
                                 checked={gen3==3?true:false}
                             />
-                            <CheckText>
+                            <CheckText textcolour={checkcolour[theme]}>
                                 Gen 3
                             </CheckText>
                         </Check>
@@ -161,7 +171,7 @@ export default function SettingsCard () {
                                 type='checkbox'
                                 checked={gen4==4?true:false}
                             />
-                        <CheckText>
+                        <CheckText textcolour={checkcolour[theme]}>
                             Gen 4
                         </CheckText>
                     </Check>
@@ -170,7 +180,7 @@ export default function SettingsCard () {
                                 type='checkbox'
                                 checked={gen5==5?true:false}
                             />
-                            <CheckText>
+                            <CheckText textcolour={checkcolour[theme]}>
                                 Gen 5
                             </CheckText>
                         </Check>
@@ -179,18 +189,18 @@ export default function SettingsCard () {
                                 type='checkbox'
                                 checked={gen6==6?true:false}
                             />
-                            <CheckText>
+                            <CheckText textcolour={checkcolour[theme]}>
                                 Gen 6
                             </CheckText>
                         </Check>
                     </Row>
                 </GenCont>
-            <Line/>
+            <Line bg={themetext[theme]}/>
             <SubCont style={{justifyContent: 'center'}} onClick={()=>setLegend(show_legendaries==false?true:false)}>
                     <CheckBox type='checkbox'
                         checked={show_legendaries}
                     />
-                    <CheckText>
+                    <CheckText textcolour={checkcolour[theme]}>
                         Legendaries Only
                     </CheckText>
             </SubCont>

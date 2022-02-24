@@ -12,6 +12,7 @@ import CardPlaceHolder from "@/Comps/CardPlaceHolder";
 import DropZone from "@/Comps/DropZone";
 import FightButton from "@/Comps/FightButton";
 import Button from "@/Comps/Button";
+import SettingsButton from "@/Comps/SettingButton";
 
 const Main = styled.div`
     width: 100vw;
@@ -95,7 +96,7 @@ export default function Stadium () {
         </HomeButton>
 
         <SettingButton>
-            <Button
+            <SettingsButton
                 text="Settings"
                 onClick={()=>router.push('/settings')}
             />

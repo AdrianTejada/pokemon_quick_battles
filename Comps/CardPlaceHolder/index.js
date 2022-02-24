@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import Image from "next/image";
-import mypic from '@/public/black.png'
+import black from '@/public/black.png'
+import white from '@/public/white.png'
 import { useState } from "react";
 import Card from "../Card";
+import { placeholder } from "../variable";
+import { useProvider } from "@/utils/provider";
 
 const CardWrapper = styled.div`
   overflow: hidden;
@@ -10,8 +13,8 @@ const CardWrapper = styled.div`
   min-height: 640px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
-  background-color: lightgrey;
-  opacity: 0.5;
+  background-color: ${props=>props.bg};
+  opacity: 0.2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,11 +25,12 @@ const CardWrapper = styled.div`
 const CardPlaceHolder = ({
   pokemon=null
 }) => {
-
+    const { theme } = useProvider()
     return (<div>
-        {pokemon===null?<CardWrapper>
+        {pokemon===null?<CardWrapper
+        bg={placeholder[theme]}>
         <Image
-        src={mypic}
+        src={theme==='default'?white:black}
         alt="Picture of the author"
         height={50}
         width={50}
