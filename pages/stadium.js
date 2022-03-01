@@ -120,6 +120,9 @@ export default function Stadium () {
                     </DropZone>
                 </Pokemon2>
             </PlaceHolderCont>
+            <PlaceHolderCont>
+                {/* <img src="../public/battle.gif" width="480" height="480"></img> */}
+            </PlaceHolderCont>
             {header===null?<SearchBar/>:
             <Header>{header}</Header>
             }
