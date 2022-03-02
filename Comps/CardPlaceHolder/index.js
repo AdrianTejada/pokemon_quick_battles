@@ -45,8 +45,8 @@ const CardPlaceHolder = ({
           hp={pokemon['HP']}
           atk={pokemon.Attack}
           def={pokemon.Defense}
-          sp_atk={pokemon['Sp. Atk']}
-          sp_def={pokemon['Sp. Atk']}
+          sp_atk={pokemon['Sp Atk']}
+          sp_def={pokemon['Sp Atk']}
           speed={pokemon.Speed}
         />}
 
