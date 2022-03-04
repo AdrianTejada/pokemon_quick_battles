@@ -85,7 +85,6 @@ export default function Stadium () {
     const router = useRouter()
 
     return <Main>
-        <React.Fragment/>
         <Background/>
 
         <HomeButton>
@@ -95,12 +94,7 @@ export default function Stadium () {
             />
         </HomeButton>
 
-        <SettingButton>
-            <SettingsButton
-                text="Settings"
-                onClick={()=>router.push('/settings')}
-            />
-        </SettingButton>
+
 
         <DndProvider backend={TouchBackend}
             options={{
@@ -127,6 +121,13 @@ export default function Stadium () {
             <Header>{header}</Header>
             }
         </DndProvider>
+
+        <SettingButton>
+            <SettingsButton
+                text="Settings"
+                onClick={()=>router.push('/settings')}
+            />
+        </SettingButton>
 
         {pokemon1 && pokemon2 && noFight?<FightButtonCont>
             <FightButton

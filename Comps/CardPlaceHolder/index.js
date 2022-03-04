@@ -40,13 +40,13 @@ const CardPlaceHolder = ({
         <Card
           name={pokemon.Name}
           number={pokemon.id}
-          type1={pokemon['Type 1']}
-          type2={pokemon['Type 2']}
-          hp={pokemon['HP']}
+          type1={pokemon.Type1}
+          type2={pokemon.Type2}
+          hp={pokemon.HP}
           atk={pokemon.Attack}
           def={pokemon.Defense}
-          sp_atk={pokemon['Sp. Atk']}
-          sp_def={pokemon['Sp. Atk']}
+          sp_atk={pokemon.SpAtk}
+          sp_def={pokemon.SpDef}
           speed={pokemon.Speed}
         />}
 
