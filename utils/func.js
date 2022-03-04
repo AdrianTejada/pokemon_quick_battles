@@ -18,8 +18,8 @@ export function filter (arr = [],
         const filtered_arr = arr.filter((o)=>{
             if ((o.id == txt
                 || o.Name.includes(txt) 
-                || o['Type 1'].includes(txt) 
-                || o['Type 2'].includes(txt))&&
+                || o.Type1.includes(txt) 
+                || o.Type2.includes(txt))&&
                 ( o.Generation == gen1
                 || o.Generation == gen2
                 || o.Generation == gen3
