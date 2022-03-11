@@ -17,11 +17,14 @@ const Main = styled.div`
 `
 
 const ButtonCont = styled.div`
-  margin-top: 30px;
-  height: 70px;
+  margin-top: 10vh;
+  height: 15vh;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+
 `
 
 export default function Home() {
@@ -29,15 +32,17 @@ export default function Home() {
 
   return <Main>
     <Background/> 
-  <Image
-  alt="Logo"
+    <Image
+    alt="Logo"
     src={logo}
     />
+
     <ButtonCont>
-    <Button
+      <Button
         text="Start!"
         onClick={()=>router.push('/stadium')}
       />
+      
       <SettingsButton
         text="Settings"
         onClick={()=>router.push('/settings')}

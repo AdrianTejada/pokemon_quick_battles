@@ -9,42 +9,64 @@ import Button from "@/Comps/Button";
 const Main = styled.div`
     width: 100vw;
     height: 100vh;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 `
 
-const HomeButton = styled.div`
-    position: absolute;
-    top: 20px;
-    left: 10px;
+const TopBtnBar = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+width: 100%;
+padding: 1vw 1vw;
+
+
+
 `
 
-const SettingButton = styled.div`
-    position: absolute;
-    top: 20px;
-    right: 10px;
+const SettingCont = styled.div`
+width: 100%;
+height: 100%;
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+
 `
+
 
 export default function Settings () {
     const router = useRouter()
     return <Main>
-        <HomeButton>
+        <TopBtnBar>
             <Button
-                text="Home"
-                onClick={()=>router.push('/')}
+            text="Home"
+            onClick={()=>router.push('/')}
             />
-        </HomeButton>
 
-        <SettingButton>
             <Button
-                text="Start!"
-                onClick={()=>router.push('/stadium')}
+            text="Start!"
+            onClick={()=>router.push('/stadium')}
             />
-        </SettingButton>
+        </TopBtnBar>
 
-        <SettingsCard/>
+        <SettingCont>
+
+            <SettingsCard/>
+        </SettingCont>
+
+    
+
 
         <Background/> 
 </Main>
 }
+
+/*
+        
+*/
