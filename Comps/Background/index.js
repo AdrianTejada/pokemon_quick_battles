@@ -12,8 +12,6 @@ const Cont = styled.div`
     overflow: hidden;
     position: absolute;
     z-index: -1;
-
-    background-color: red;
 `
 
 const ImageCont = styled.div`

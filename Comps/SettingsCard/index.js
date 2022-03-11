@@ -80,7 +80,7 @@ margin: 1vh 0;
 const GHead = styled.div`
 font-family: Lato;
 font-size: 1.25em;
-color: ${props=>props.themetxcolour};
+color: ${props=>props.headColor};
 width: 100%;
 margin-bottom: 0.5em;
 `
@@ -144,7 +144,7 @@ export default function SettingsCard ({
             <Line bg={themetext[theme]}/>
             
             <GCont>
-                <GHead>
+                <GHead headColor={maintext[theme]}>
                     Pokemon Generation
                 </GHead>
                 

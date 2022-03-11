@@ -24,7 +24,9 @@ const ButtonCont = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+`
+const ImgCont = styled.div`
+width: 75vh;
 `
 
 export default function Home() {
@@ -32,10 +34,16 @@ export default function Home() {
 
   return <Main>
     <Background/> 
-    <Image
-    alt="Logo"
-    src={logo}
-    />
+    <ImgCont>
+      <Image
+      alt="Logo"
+      src={logo}
+      width={970}
+      height={506}
+      layout='responsive'
+      />
+    </ImgCont>
+    
 
     <ButtonCont>
       <Button
