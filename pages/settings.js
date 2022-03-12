@@ -23,9 +23,6 @@ justify-content: space-between;
 
 width: 100%;
 padding: 1vw 1vw;
-
-
-
 `
 
 const SettingCont = styled.div`

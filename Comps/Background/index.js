@@ -27,8 +27,6 @@ export const Background = () => {
             <Image 
             alt={'The Background Image'}
             src={theme==='default'?day:night} 
-            width={2302}
-            height={1212}
             layout="fill"
             objectFit="cover"
             objectPosition='center'
