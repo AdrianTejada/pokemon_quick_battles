@@ -7,7 +7,7 @@ import { circle } from "../variable";
 import { card } from "../variable";
 
 const MainCont = styled.div`
-    width:20vw;
+    width:25vw;
     min-width: 300px;
     padding: 0 2vw;
 `

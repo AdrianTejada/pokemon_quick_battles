@@ -27,6 +27,7 @@ const DataCont = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
 `
 
 const Triangle = styled.div`
@@ -39,16 +40,19 @@ const Triangle = styled.div`
 `
 
 const Data = styled.div`
-    min-width: 100%;
-    border-radius: 20px;
-    /* height: 500px; */
+    width: 100%;
+    border-radius: 1em;
+    height: 500px;
     background-color: white;
     padding: 20px;
+    height: 60vh;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    /* overflow: scroll; */
+
+    overflow: scroll;
 `
 
 var timer = null;
