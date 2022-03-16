@@ -74,7 +74,7 @@ export default function SearchBar () {
 
         if (timer === null) {
             timer = setTimeout(async()=>{
-            const result = await axios.get('/api/pokemon',{
+            const result = await axios.get(`http://localhost:5000/getpokemon`,{
                 params: {
                     txt,
                     gen1,
@@ -86,7 +86,6 @@ export default function SearchBar () {
                     show_legendaries
                 }})
             setData(result===[]?null:result.data);
-            console.log(data)
             timer = null;
             }, 500)
         }
