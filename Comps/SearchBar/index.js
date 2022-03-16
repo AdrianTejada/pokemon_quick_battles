@@ -74,7 +74,7 @@ export default function SearchBar () {
 
         if (timer === null) {
             timer = setTimeout(async()=>{
-            const result = await axios.get("http://localhost:5000/getpokemon",{
+            const result = await axios.get(`http://localhost:5000/getpokemon`,{
                 params: {
                     txt,
                     gen1,
