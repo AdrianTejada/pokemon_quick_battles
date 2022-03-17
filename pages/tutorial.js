@@ -14,14 +14,33 @@ const Main = styled.div`
     flex-direction: column;
 `
 
+const TopBtnBar = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 1vw 1vw;
+`
+
 export default function Tutorial() {
 
     return <Main>
         <Background/> 
+        <TopBtnBar>
+            <Button
+                text="Skip"
+                onClick={()=>router.push('/stadium')}
+            />
 
-            <IntroCard>
+            <Button
+                text="Home"
+                onClick={()=>router.push('/')}
+            />
 
-            </IntroCard>
+        </TopBtnBar>
+
+        <IntroCard/>
             
     </Main>
 } 
