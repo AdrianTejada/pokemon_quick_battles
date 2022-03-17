@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import prof from '@/public/assets/Professor_Cerise_PJ.png'
 import instruct1 from "@/public/instructions/1.png"
+import SearchBar from "../SearchBar"
+import { useState } from "react";
 
 import { AiOutlineCaretDown } from 'react-icons/ai'
 
@@ -110,19 +112,23 @@ padding: 2em;
 `
 
 export const IntroCard = ({
-    char = "professor henry",
-    description = "First you want to pick you first pokemon",
+    char = "Professor Henry",
+    description = "First you want to pick you first pokemon by searching it!",
+    description2 = "Secondly, you can drag the pokemon into one of the 2 cards on the page!",
+    description3 = "Thirdly, when both cards have a pokemon in them the battle button will appear and you can click on it!",
+    description4 = "Finally, after waiting a few seconds the result of the battle will appear!",
+    description5 = "Now you have the chance to learn which pokemon is stronger in our game POKEMON QUICK BATTLES",
     nextPage = () => {console.log("I was clicked")},
     instructImg = ""
 }) => {
+
     const {theme} = useProvider()
-    
+    const [state, nextState] = useState(0);
+
+    if(state === 0)
+    {
     return <Cont>
-
-        
-
-
-        <BotBar onClick={()=>{nextPage()}}>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
             <Top>
                 <Triangle />
                 <NameContent>
@@ -146,12 +152,7 @@ export const IntroCard = ({
         <BGImages>
             <Middle>
                 <ImgCont2>
-                    <Image
-                        src={instruct1}
-                        width={557}
-                        height={309}
-                        layout="responsive"
-                    />
+                    <SearchBar/>
                 </ImgCont2>
             </Middle>
 
@@ -166,6 +167,182 @@ export const IntroCard = ({
         </BGImages>
 
     </Cont>
+    }
+
+    if(state === 1)
+    {
+    return <Cont>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
+            <Top>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
+            </Top>
+
+            <TxtCont>
+                <PContent>
+                    {description2}
+                </PContent>
+
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/>
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
+        </BotBar>
+
+        <BGImages>
+            <Middle>
+                <ImgCont2>
+                    <SearchBar/>
+                </ImgCont2>
+            </Middle>
+
+            <ImgCont1>
+                <Image 
+                src={prof}
+                width={276}
+                height={575}
+                layout="responsive"
+                />
+            </ImgCont1>
+        </BGImages>
+
+    </Cont>
+    }
+
+    if(state === 2)
+    {
+    return <Cont>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
+            <Top>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
+            </Top>
+
+            <TxtCont>
+                <PContent>
+                    {description3}
+                </PContent>
+
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/>
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
+        </BotBar>
+
+        <BGImages>
+            <Middle>
+                <ImgCont2>
+                    <SearchBar/>
+                </ImgCont2>
+            </Middle>
+
+            <ImgCont1>
+                <Image 
+                src={prof}
+                width={276}
+                height={575}
+                layout="responsive"
+                />
+            </ImgCont1>
+        </BGImages>
+
+    </Cont>
+    }
+    if(state === 3)
+    {
+    return <Cont>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
+            <Top>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
+            </Top>
+
+            <TxtCont>
+                <PContent>
+                    {description4}
+                </PContent>
+
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/>
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
+        </BotBar>
+
+        <BGImages>
+            <Middle>
+                <ImgCont2>
+                    <SearchBar/>
+                </ImgCont2>
+            </Middle>
+
+            <ImgCont1>
+                <Image 
+                src={prof}
+                width={276}
+                height={575}
+                layout="responsive"
+                />
+            </ImgCont1>
+        </BGImages>
+
+    </Cont>
+    }
+
+    if(state === 4)
+    {
+    return <Cont>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
+            <Top>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
+            </Top>
+
+            <TxtCont>
+                <PContent>
+                    {description5}
+                </PContent>
+
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/>
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
+        </BotBar>
+
+        <BGImages>
+            <Middle>
+                <ImgCont2>
+                    <SearchBar/>
+                </ImgCont2>
+            </Middle>
+
+            <ImgCont1>
+                <Image 
+                src={prof}
+                width={276}
+                height={575}
+                layout="responsive"
+                />
+            </ImgCont1>
+        </BGImages>
+
+    </Cont>
+    }
 }
 
 
