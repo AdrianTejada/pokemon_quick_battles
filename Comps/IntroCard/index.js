@@ -9,18 +9,16 @@ import { useProvider } from "@/utils/provider"
 import Image from "next/image"
 
 const Cont = styled.div`
-    width: 100vw;
-    height: 100vh;
-
-   display: flex; 
-   flex-direction: column;
-   justify-content: flex-end;
-   align-items: flex-end;
+width: 100vw;
+height: 100vh;
+display: flex; 
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-end;
 `
 const BotBar = styled.div`
 height: 30vh;
 width: 100vw;
-background-color: white;
 
 z-index: 1;
 position: absolute;
@@ -29,22 +27,43 @@ flex-direction: column;
 justify-content: space-between;
 `
 const Top = styled.div`
+width: 100%;
+display: flex; 
+justify-content: flex-end;
+overflow: none;
+height: 4em;
+
+`
+const Triangle = styled.div`
+width: 0; 
+height: 0; 
+border-left: 10vh solid transparent;
+border-right: 10vh solid transparent;
+
+border-bottom: 10vh solid red;
+
+margin-right: -5vw;
+`
+const NameContent = styled.div`
+font-family: Lato;
+font-weight: 500;
+font-size: 2em;
+padding: 0.5em 20%;
+
+background-color: red;
 `
 const Bottom = styled.div`
 display: flex;
 justify-content: flex-end;
 margin: 0 3vw 1vw 0;
 `
-const NameBar = styled.div`
-width: 100%;
-background-color: red;
-display: flex; 
-justify-content: flex-end;
 
-font-family: Lato;
-font-weight: 500;
-font-size: 2em;
-padding: 0.5vw 20%;
+const TxtCont = styled.div`
+background-color: white;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
 `
 const PContent = styled.div`
 margin: 1vw 3vw;
@@ -54,6 +73,7 @@ font-size: 1.5em;
 
 overflow: hidden;
 white-space: nowrap;
+background-color: white;
 
 animation: changing 3.5s steps(100, end);
 
@@ -72,6 +92,12 @@ height: 100vh;
 display: flex;
 justify-content: space-between;
 `
+const Middle = styled.div`
+width: 60%;
+display: flex;
+justify-content: center;
+padding-top: 5%;
+`
 const ImgCont1 = styled.div`
 width: 25%;
 padding: 2em;
@@ -79,9 +105,8 @@ margin-right: 10%;
 
 `
 const ImgCont2 = styled.div`
-width: 25%;
+width: 50%;
 padding: 2em;
-margin: 5% 0 0 10%;
 `
 
 export const IntroCard = ({
@@ -99,33 +124,37 @@ export const IntroCard = ({
 
         <BotBar onClick={()=>{nextPage()}}>
             <Top>
-            <NameBar>
-                {char}
-            </NameBar>
-
-            <PContent>
-                {description}
-            </PContent>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
             </Top>
 
-            <Bottom>
-                <BotBtn>
-                    <AiOutlineCaretDown size="2em"/>
-                </BotBtn>
-            </Bottom>
+            <TxtCont>
+                <PContent>
+                    {description}
+                </PContent>
 
-            
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/>
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
         </BotBar>
 
         <BGImages>
-            <ImgCont2>
-                <Image
-                    src={instruct1}
-                    width={557}
-                    height={309}
-                    layout="responsive"
-                />
-            </ImgCont2>
+            <Middle>
+                <ImgCont2>
+                    <Image
+                        src={instruct1}
+                        width={557}
+                        height={309}
+                        layout="responsive"
+                    />
+                </ImgCont2>
+            </Middle>
+
             <ImgCont1>
                 <Image 
                 src={prof}
@@ -134,7 +163,6 @@ export const IntroCard = ({
                 layout="responsive"
                 />
             </ImgCont1>
-
         </BGImages>
 
     </Cont>
