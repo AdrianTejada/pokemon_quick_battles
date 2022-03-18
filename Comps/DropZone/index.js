@@ -16,7 +16,6 @@ const DropZone = ({
         accept:'pokemon',
         drop:(item, monitor)=>{
             onDropItem(item)
-            console.log(item)
         },
         collect: (monitor) => ({
             canDrop: monitor.canDrop(),

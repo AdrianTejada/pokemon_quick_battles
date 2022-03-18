@@ -73,21 +73,25 @@ export default function SearchBar () {
         }
 
         if (timer === null) {
+            if (!localStorage.getItem('token')) {
+                alert('you are not logged in!')
+            }
             timer = setTimeout(async()=>{
-            const result = await axios.get(`https://pokemon-api-bcit.herokuapp.com/getpokemon`,{
-            // const result = await axios.get(`http://localhost:5000/getpokemon`,{
-                params: {
-                    txt,
-                    gen1,
-                    gen2,
-                    gen3,
-                    gen4,
-                    gen5,
-                    gen6,
-                    show_legendaries
-                }})
-            setData(result===[]?null:result.data);
-            timer = null;
+                // const result = await axios.get(`https://pokemon-api-bcit.herokuapp.com/getpokemon`,{
+                const result = await axios.get(`http://localhost:5000/getpokemon`,{
+                    params: {
+                        token: localStorage.getItem('token'),
+                        txt,
+                        gen1,
+                        gen2,
+                        gen3,
+                        gen4,
+                        gen5,
+                        gen6,
+                        show_legendaries
+                    }})
+                setData(result===[]?null:result.data);
+                timer = null;
             }, 500)
         }
     }

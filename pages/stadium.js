@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { DndProvider } from 'react-dnd';
 import { TouchBackend} from 'react-dnd-touch-backend'
+
+import { io } from "socket.io-client";
 
 import { Background } from "@/Comps/Background";
 import SearchBar from "@/Comps/SearchBar";
@@ -82,15 +84,37 @@ export default function Stadium () {
     const [header, setHeader] = useState(null)
     const [noFight, setFight] = useState(true)
 
+    const [mySoc, setMySoc] = useState(null)
+
     const router = useRouter()
+
+    const JoinUser = async () => {
+        if (mySoc !== null) {
+            mySoc.emit('user_joined', localStorage.getItem('username'))
+        }
+    }
+
+    useState(()=>{
+        const socket = io('http://localhost:5000')
+        setMySoc(socket);
+        setTimeout(JoinUser,500);
+
+        socket.on('setpokemon_1', (pokemon1)=>{
+            setPokemon1(pokemon1)
+        })
+
+        socket.on('setpokemon_2', (pokemon2)=>{
+            setPokemon2(pokemon2)
+        })
+    },[])
 
     return <Main>
         <Background/>
 
         <HomeButton>
             <Button
-                text="Home"
-                onClick={()=>router.push('/')}
+                text="Join Room"
+                onClick={JoinUser}
             />
         </HomeButton>
 
@@ -103,13 +127,21 @@ export default function Stadium () {
             }}>
             <PlaceHolderCont>
                 <Pokemon1 right={pokemon1_pos} op={pokemon1_op}>
-                    <DropZone onDropItem={(item)=>setPokemon1(item)} >
+                    <DropZone onDropItem={async(item)=>{
+                        if (mySoc !== null) {
+                            mySoc.emit('pokemon_1', item)
+                        }
+                    }} >
                         <CardPlaceHolder pokemon={pokemon1}/>
                     </DropZone>
                 </Pokemon1>
 
                 <Pokemon2 left={pokemon2_pos} op={pokemon2_op}>
-                    <DropZone onDropItem={(item)=>setPokemon2(item)} >
+                    <DropZone onDropItem={async(item)=>{
+                        if (mySoc !== null) {
+                            mySoc.emit('pokemon_2', item)
+                        }
+                    }} >
                         <CardPlaceHolder pokemon={pokemon2}/>
                     </DropZone>
                 </Pokemon2>
