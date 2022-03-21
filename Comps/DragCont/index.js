@@ -31,8 +31,8 @@ export default function DragCont ({
 
     if (coords && isDragging) {
         // console.log(coords)
-        sty.left = coords.x + 5
-        sty.top = coords.y + 5
+        sty.left = coords.x 
+        sty.top = coords.y 
         sty.position = 'absolute'
     }
 
