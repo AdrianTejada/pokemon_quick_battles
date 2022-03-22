@@ -115,8 +115,8 @@ export default function SearchBar () {
                 alert('you are not logged in!')
             }
             timer = setTimeout(async()=>{
-                // const result = await axios.get(`https://pokemon-api-bcit.herokuapp.com/getpokemon`,{
-                const result = await axios.get(`http://localhost:5000/getpokemon`,{
+                const result = await axios.get(`https://pokemon-api-bcit.herokuapp.com/getpokemon`,{
+                // const result = await axios.get(`http://localhost:5000/getpokemon`,{
                     params: {
                         token: localStorage.getItem('token'),
                         txt,
@@ -154,8 +154,8 @@ export default function SearchBar () {
                         </DragCont>
                     )}
                 </Data>
-                    <PageButtonCont>
-                    {/* {butt_arr.map((o,i)=><PageButton style={{background:o===page?"pink":"white"}}
+                    {/* <PageButtonCont>
+                    {butt_arr.map((o,i)=><PageButton style={{background:o===page?"pink":"white"}}
                     onClick={async()=>{
                         setCurPage(p)
                         const result = await axios.get(`http://localhost:5000/getpokemon`,{
@@ -174,11 +174,10 @@ export default function SearchBar () {
                         setData(result===[]?null:result.data);
                         console.log(page)
                     }}
-                    >{o}</PageButton>)} */}
-                        <PageButton onClick={()=>console.log('clicked')}>click</PageButton>
-                    </PageButtonCont>
+                    >{o}</PageButton>)}
+                    </PageButtonCont> */}
             </ButtonCont>
         </DataCont>}
-        <button onClick={()=>console.log('clicked')}>click</button>
+        {/* <button onClick={()=>console.log('clicked')}>click</button> */}
     </Cont>
 }

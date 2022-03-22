@@ -119,7 +119,7 @@ export default function Home() {
   />
   <LoginCont>
       <TextInput type="text" placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
-      <TextInput type="text" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
+      <TextInput type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
       <ButtonCont>
         <Button text="Login" onClick={async ()=>{
           const result = await axios.post('https://pokemon-api-bcit.herokuapp.com/login', {
