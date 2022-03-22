@@ -128,7 +128,7 @@ export default function SettingsCard ({
         <Cont>
             <SubCont onClick={()=>setTheme(theme==='default'?'dark':'default')}>
                 <Text themetxcolour={maintext[theme]}>
-                    Default Theme
+                    {theme==='default'?'Default Theme':'Dark Theme'}
                 </Text>
                 <Bar>
                     <Circle top={theme==="default"?'-11px':'11px'} circlehue={circlecolour[theme]}/>
@@ -137,7 +137,7 @@ export default function SettingsCard ({
             <Line bg={themetext[theme]}/>
                 <GenCont>
                     <Row>
-                        <Check onClick={()=>setGen1(gen1==1?false:1)}>
+                        <Check onClick={()=>setGen1(gen1==1?0:1)}>
                             <CheckBox
                                 type='checkbox'
                                 checked={gen1==1?true:false}
@@ -146,7 +146,7 @@ export default function SettingsCard ({
                                 Gen 1
                             </CheckText>
                         </Check>
-                        <Check onClick={()=>setGen2(gen2==2?false:2)}>
+                        <Check onClick={()=>setGen2(gen2==2?0:2)}>
                             <CheckBox
                                 type='checkbox'
                                 checked={gen2==2?true:false}
@@ -155,7 +155,7 @@ export default function SettingsCard ({
                                 Gen 2
                             </CheckText>
                         </Check>
-                        <Check onClick={()=>setGen3(gen3==3?false:3)}>
+                        <Check onClick={()=>setGen3(gen3==3?0:3)}>
                             <CheckBox
                                 type='checkbox'
                                 checked={gen3==3?true:false}
@@ -166,7 +166,7 @@ export default function SettingsCard ({
                         </Check>
                     </Row>
                     <Row>
-                    <Check onClick={()=>setGen4(gen4==4?false:4)}>
+                    <Check onClick={()=>setGen4(gen4==4?0:4)}>
                             <CheckBox
                                 type='checkbox'
                                 checked={gen4==4?true:false}
@@ -175,7 +175,7 @@ export default function SettingsCard ({
                             Gen 4
                         </CheckText>
                     </Check>
-                    <Check onClick={()=>setGen5(gen5==5?false:5)}>
+                    <Check onClick={()=>setGen5(gen5==5?0:5)}>
                             <CheckBox
                                 type='checkbox'
                                 checked={gen5==5?true:false}
@@ -184,7 +184,7 @@ export default function SettingsCard ({
                                 Gen 5
                             </CheckText>
                         </Check>
-                        <Check onClick={()=>setGen6(gen6==6?false:6)}>
+                        <Check onClick={()=>setGen6(gen6==6?0:6)}>
                             <CheckBox
                                 type='checkbox'
                                 checked={gen6==6?true:false}

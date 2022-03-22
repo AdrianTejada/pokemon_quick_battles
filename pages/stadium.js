@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import { DndProvider } from 'react-dnd';
 import { TouchBackend} from 'react-dnd-touch-backend'
+
+import { io } from "socket.io-client";
 
 import { Background } from "@/Comps/Background";
 import SearchBar from "@/Comps/SearchBar";
@@ -82,15 +84,72 @@ export default function Stadium () {
     const [header, setHeader] = useState(null)
     const [noFight, setFight] = useState(true)
 
+    const [mySoc, setMySoc] = useState(null)
+
     const router = useRouter()
+
+    const JoinUser = async () => {
+        if (mySoc !== null) {
+            mySoc.emit('user_joined', localStorage.getItem('username'))
+            console.log(pokemon1, pokemon2)
+        }
+    }
+
+    useState(()=>{
+        const socket = io('http://localhost:5000')
+        setMySoc(socket);
+        setTimeout(JoinUser,500);
+
+        socket.on('setpokemon_1', (data)=>{
+            setPokemon1(data)
+        })
+
+        socket.on('setpokemon_2', (data)=>{
+            setPokemon2(data)
+        })
+
+        socket.on('fighting', (Pokemon1, Pokemon2)=>{
+            setPoke1Pos('-3px')
+            setPoke2Pos('-3px')
+
+            setTimeout(()=>{
+                if (Pokemon1.Total < Pokemon2.Total) {
+                    setPoke1O(0)
+                    setPoke2Pos('-223px')
+                    setHeader(`${Pokemon2.Name} wins!`)
+                    setFight(null)
+                } else if (Pokemon1.Total > Pokemon2.Total) {
+                    setPoke2O(0)
+                    setPoke1Pos('-223px')
+                    setHeader(`${Pokemon1.Name} wins!`)
+                    setFight(null)
+                } else {
+                    setHeader(`Draw!`)
+                    setFight(null)
+                }
+            },2000)
+        })
+
+        socket.on('setReset', ()=>{
+            setPokemon1(null)
+            setPokemon2(null)
+            setPoke1Pos('200px')
+            setPoke2Pos('200px')
+            setPoke1O(1)
+            setPoke2O(1)
+            setHeader(null)
+            setFight(true)
+        })
+    },[])
+
 
     return <Main>
         <Background/>
 
         <HomeButton>
             <Button
-                text="Home"
-                onClick={()=>router.push('/')}
+                text="Join Room"
+                onClick={JoinUser}
             />
         </HomeButton>
 
@@ -103,13 +162,21 @@ export default function Stadium () {
             }}>
             <PlaceHolderCont>
                 <Pokemon1 right={pokemon1_pos} op={pokemon1_op}>
-                    <DropZone onDropItem={(item)=>setPokemon1(item)} >
+                    <DropZone onDropItem={async(item)=>{
+                        if (mySoc !== null) {
+                            mySoc.emit('pokemon_1', item)
+                        }
+                    }}>
                         <CardPlaceHolder pokemon={pokemon1}/>
                     </DropZone>
                 </Pokemon1>
 
                 <Pokemon2 left={pokemon2_pos} op={pokemon2_op}>
-                    <DropZone onDropItem={(item)=>setPokemon2(item)} >
+                    <DropZone onDropItem={async(item)=>{
+                        if (mySoc !== null) {
+                            mySoc.emit('pokemon_2', item)
+                        }
+                    }}>
                         <CardPlaceHolder pokemon={pokemon2}/>
                     </DropZone>
                 </Pokemon2>
@@ -131,44 +198,19 @@ export default function Stadium () {
 
         {pokemon1 && pokemon2 && noFight?<FightButtonCont>
             <FightButton
-                onClick={()=>{
-                    setPoke1Pos('-3px')
-                    setPoke2Pos('-3px')
-
-                    setTimeout(()=>{
-                        if (pokemon1.Total < pokemon2.Total) {
-                            setPoke1O(0)
-                            setPoke2Pos('-223px')
-                            setHeader(`${pokemon2.Name} wins!`)
-                            setTimeout(()=>{
-                                setPokemon1(null)
-                            },500)
-                        } else if (pokemon1.Total > pokemon2.Total) {
-                            setPoke2O(0)
-                            setPoke1Pos('-223px')
-                            setHeader(`${pokemon1.Name} wins!`)
-                            setTimeout(()=>{
-                                setPokemon2(null)
-                            },500)
-                        } else {
-                            setHeader(`Draw!`)
-                            setFight(null)
-                        }
-                    },2000)
+                onClick={async()=>{
+                    if (mySoc !== null) {
+                        mySoc.emit('fight', true)
+                    }
                 }}
             />
             </FightButtonCont>:
             <FightButtonCont>
                 <Button
-                    onClick={()=>{
-                        setPokemon1(null)
-                        setPokemon2(null)
-                        setPoke1Pos('200px')
-                        setPoke2Pos('200px')
-                        setPoke1O(1)
-                        setPoke2O(1)
-                        setHeader(null)
-                        setFight(true)
+                    onClick={async()=>{
+                        if (mySoc !== null) {
+                            mySoc.emit('reset', true)
+                        }
                     }}
                     text="Reset"
                 />
