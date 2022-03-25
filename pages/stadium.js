@@ -145,16 +145,6 @@ export default function Stadium () {
 
     return <Main>
         <Background/>
-
-        <HomeButton>
-            <Button
-                text="Join Room"
-                onClick={JoinUser}
-            />
-        </HomeButton>
-
-
-
         <DndProvider backend={TouchBackend}
             options={{
                 enableTouchEvents:true,
