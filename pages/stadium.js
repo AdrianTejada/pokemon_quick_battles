@@ -26,10 +26,10 @@ const Main = styled.div`
 const TopBtnBar = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: space-between;
-
+justify-content: flex-end;
 width: 100%;
 padding: 1vw 1vw;
+margin-bottom: -50px;
 `
 
 
@@ -143,6 +143,12 @@ export default function Stadium () {
 
     return <Main>
         <Background/>
+        <TopBtnBar>
+            <Button
+                text="Settings"
+                onClick={()=>router.push('/settings')}
+            />
+        </TopBtnBar>
         <DndProvider backend={TouchBackend}
             options={{
                 enableTouchEvents:true,

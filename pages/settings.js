@@ -42,7 +42,7 @@ export default function Settings () {
     return <Main>
         <TopBtnBar>
             <Button
-                text="Home"
+                text="Back"
                 onClick={()=>router.push('/stadium')}
             />
 
