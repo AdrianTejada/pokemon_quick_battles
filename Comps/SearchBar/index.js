@@ -154,11 +154,12 @@ export default function SearchBar () {
                         </DragCont>
                     )}
                 </Data>
-                    {/* <PageButtonCont>
+                    <PageButtonCont>
                     {butt_arr.map((o,i)=><PageButton style={{background:o===page?"pink":"white"}}
                     onClick={async()=>{
                         setCurPage(p)
-                        const result = await axios.get(`http://localhost:5000/getpokemon`,{
+                        const result = await axios.get(`https://pokemon-api-bcit.herokuapp.com/getpokemon`,{
+                        // const result = await axios.get(`http://localhost:5000/getpokemon`,{
                             params: {
                                 token: localStorage.getItem('token'),
                                 txt,
@@ -175,9 +176,8 @@ export default function SearchBar () {
                         console.log(page)
                     }}
                     >{o}</PageButton>)}
-                    </PageButtonCont> */}
+                    </PageButtonCont>
             </ButtonCont>
         </DataCont>}
-        {/* <button onClick={()=>console.log('clicked')}>click</button> */}
     </Cont>
 }
