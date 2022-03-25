@@ -1,6 +1,7 @@
 import { Background } from "@/Comps/Background"
 import styled from "styled-components"
 import logo from '@/public/assets/logo.png'
+import question from '@/public/instructions/question.png'
 import Image from "next/image"
 import Button from "../Comps/Button"
 import { useRouter } from "next/router"
@@ -8,7 +9,6 @@ import { useState } from "react";
 import { useProvider } from "@/utils/provider"
 import { themetext } from "@/Comps/variable"
 import axios from "axios"
-import question from '@/public/instructions/question.png'
 
 const Main = styled.div`
     width: 100vw;
@@ -85,7 +85,7 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
 `
-const Question = styled.div`
+const QuestionCont = styled.div`
 position: absolute;
 top: 10px;
 right: 10px;
@@ -100,6 +100,11 @@ const SignupButtCont = styled.div`
   /* background-color:red; */
   top: 80px;
   align-items: center;
+`
+const Question = styled.div`
+position: relative;
+bottom: 550px;
+left: 1325px;
 `
 
 
@@ -122,13 +127,13 @@ export default function Home() {
   src={logo}
   />
 
-  <Question>
+  <QuestionCont>
     <Image
     src={question} onClick={()=>router.push('/tutorial')}
     width="50px"
     height="50px"
     />
-    </Question>
+    </QuestionCont>
   <LoginCont>
       <TextInput type="text" placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
       <TextInput type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
