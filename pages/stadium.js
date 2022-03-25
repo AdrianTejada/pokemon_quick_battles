@@ -20,17 +20,25 @@ const Main = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 `
+const TopBtnBar = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+width: 100%;
+padding: 1vw 1vw;
+`
+
 
 const PlaceHolderCont = styled.div`
-    position: absolute;
-    justify-content: center;
     display: flex;
-    top: 180px;
-    width: 1200px;
+    justify-content: center;
+    position: absolute;
+
+    top: 20vh;
 `
 
 const FightButtonCont = styled.div`
@@ -60,17 +68,6 @@ const Header = styled.div`
     margin-top: 20px;
 `
 
-const HomeButton = styled.div`
-    position: absolute;
-    top: 20px;
-    left: 10px;
-`
-
-const SettingButton = styled.div`
-    position: absolute;
-    top: 20px;
-    right: 10px;
-`
 
 
 
@@ -172,20 +169,13 @@ export default function Stadium () {
                     </DropZone>
                 </Pokemon2>
             </PlaceHolderCont>
-            <PlaceHolderCont>
-                {/* <img src="../public/battle.gif" width="480" height="480"></img> */}
-            </PlaceHolderCont>
+        
             {header===null?<SearchBar/>:
             <Header>{header}</Header>
             }
         </DndProvider>
 
-        <SettingButton>
-            <SettingsButton
-                text="Settings"
-                onClick={()=>router.push('/settings')}
-            />
-        </SettingButton>
+
 
         {pokemon1 && pokemon2 && noFight?<FightButtonCont>
             <FightButton

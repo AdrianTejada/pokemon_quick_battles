@@ -3,13 +3,15 @@ import { useProvider } from "@/utils/provider";
 import { settingbgcolor } from '../variable'
 
 const MainButton = styled.button`
-    width:100px;
-    height:30px;
     background:${props=>props.settingbackground};
-    border-radius:20px;
+    border-radius:10em;
     color:white;
-    box-shadow: 0px 1px 1px black;
+    box-shadow: 0px 4px 2px #505050;
     border:none;
+    padding: 0.4em 1.5em;
+
+    font-family: Share Tech;
+    font-size: 1.75em;
 `;
 
 const SettingsButton = ({

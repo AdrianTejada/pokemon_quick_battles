@@ -6,26 +6,36 @@ import { useProvider } from "@/utils/provider"
 import Image from "next/image"
 
 const Cont = styled.div`
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+
     overflow: hidden;
     position: absolute;
     z-index: -1;
-    align-self: center;
 `
 
 const ImageCont = styled.div`
-    min-height: 100vh;
-    position: absolute;
-    overflow: hidden;
-    object-fit: cover;
+height: 100vh;
 `
 
 export const Background = () => {
     const {theme} = useProvider()
+    console.log(theme==='default'?day.src:night.src)
+    
     return <Cont>
         <ImageCont>
-            <Image alt={'The Image'} src={theme==='default'?day:night} style={{width: '100%', height: '100vh', objectFit: 'cover'}}/>
+            <Image 
+            alt={'The Background Image'}
+            src={theme==='default'?day:night} 
+            layout="fill"
+            objectFit="cover"
+            objectPosition='center'
+            />
         </ImageCont>
-</Cont>
+    </Cont>
 }
+
+
+/*
+
+*/
