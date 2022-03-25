@@ -13,7 +13,7 @@ import SearchBar from "@/Comps/SearchBar";
 import CardPlaceHolder from "@/Comps/CardPlaceHolder";
 import DropZone from "@/Comps/DropZone";
 import FightButton from "@/Comps/FightButton";
-import Button from "@/Comps/Button";
+import Button from "../Comps/Button";
 import SettingsButton from "@/Comps/SettingButton";
 
 const Main = styled.div`

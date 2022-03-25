@@ -1,10 +1,8 @@
 import { Background } from "@/Comps/Background"
-import SearchBar from "@/Comps/SearchBar"
 import styled from "styled-components"
 import logo from '@/public/assets/logo.png'
 import Image from "next/image"
-import Button from "@/Comps/Button"
-import SettingsButton from "@/Comps/SettingButton"
+import Button from "../Comps/Button"
 import { useRouter } from "next/router"
 import { useState } from "react";
 import { useProvider } from "@/utils/provider"
