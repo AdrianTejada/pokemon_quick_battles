@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 
 import { Background } from "@/Comps/Background";
-import  SettingsCard  from "@/Comps/SettingsCard";
+import  SettingsCard  from "../Comps/SettingsCard";
 import Button from "@/Comps/Button";
 
 

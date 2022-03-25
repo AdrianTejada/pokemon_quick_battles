@@ -194,7 +194,7 @@ const Card = ({
     return <Cont>
             <ClearCont clearcont={clear[theme]}/>
             <PictureCont>
-                <PokeImage src={`https://img.pokemondb.net/sprites/x-y/normal/${name.toLowerCase()}.png`}/>
+                <PokeImage alt="The Pokemon" src={`https://img.pokemondb.net/sprites/x-y/normal/${name.toLowerCase()}.png`}/>
             </PictureCont>
 
 
