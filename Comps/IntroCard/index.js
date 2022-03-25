@@ -1,14 +1,17 @@
 import styled from "styled-components"
 import prof from '@/public/assets/Professor_Cerise_PJ.png'
-import instruct1 from "@/public/instructions/1.png"
-import SearchBar from "../SearchBar"
 import { useState } from "react";
-
+import Image from 'next/image'
+import firstintro from '@/public/instructions/firstintro.png'
+import secondintro from '@/public/instructions/secondintro.png'
+import thirdintro from '@/public/instructions/thirdintro.png'
+import fourthintro from '@/public/instructions/fourthintro.png'
+import fifthintro from '@/public/instructions/fifthintro.png'
+import { useRouter } from "next/router"
 import { AiOutlineCaretDown } from 'react-icons/ai'
 
 import { useProvider } from "@/utils/provider"
 
-import Image from "next/image"
 
 const Cont = styled.div`
 width: 100vw;
@@ -112,6 +115,7 @@ padding: 2em;
 `
 
 export const IntroCard = ({
+    
     char = "Professor Henry",
     description = "First you want to pick you first pokemon by searching it!",
     description2 = "Secondly, you can drag the pokemon into one of the 2 cards on the page!",
@@ -124,6 +128,7 @@ export const IntroCard = ({
 
     const {theme} = useProvider()
     const [state, nextState] = useState(0);
+    const router = useRouter()
 
     if(state === 0)
     {
@@ -152,7 +157,9 @@ export const IntroCard = ({
         <BGImages>
             <Middle>
                 <ImgCont2>
-                    <SearchBar/>
+                    <Image
+                    src={firstintro}
+                    />
                 </ImgCont2>
             </Middle>
 
@@ -196,7 +203,9 @@ export const IntroCard = ({
         <BGImages>
             <Middle>
                 <ImgCont2>
-                    <SearchBar/>
+                <Image
+                    src={secondintro}
+                    />
                 </ImgCont2>
             </Middle>
 
@@ -240,7 +249,9 @@ export const IntroCard = ({
         <BGImages>
             <Middle>
                 <ImgCont2>
-                    <SearchBar/>
+                <Image
+                    src={thirdintro}
+                    />
                 </ImgCont2>
             </Middle>
 
@@ -283,7 +294,9 @@ export const IntroCard = ({
         <BGImages>
             <Middle>
                 <ImgCont2>
-                    <SearchBar/>
+                <Image
+                    src={fourthintro}
+                    />
                 </ImgCont2>
             </Middle>
 
@@ -303,7 +316,7 @@ export const IntroCard = ({
     if(state === 4)
     {
     return <Cont>
-        <BotBar onClick={()=>{nextState (state + 1)}}>
+        <BotBar onClick={()=>router.push('/')}>
             <Top>
                 <Triangle />
                 <NameContent>
@@ -318,7 +331,7 @@ export const IntroCard = ({
 
                 <Bottom>
                     <BotBtn>
-                        <AiOutlineCaretDown size="2em"/>
+                        <AiOutlineCaretDown size="2em"/> 
                     </BotBtn>
                 </Bottom>
             </TxtCont>
@@ -327,7 +340,9 @@ export const IntroCard = ({
         <BGImages>
             <Middle>
                 <ImgCont2>
-                    <SearchBar/>
+                <Image
+                    src={fifthintro}
+                    />
                 </ImgCont2>
             </Middle>
 

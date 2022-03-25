@@ -6,6 +6,7 @@ import Image from "next/image"
 import Button from "@/Comps/Button"
 import SettingsButton from "@/Comps/SettingButton"
 import { useRouter } from "next/router"
+import question from '@/public/instructions/question.png'
 
 const Main = styled.div`
     width: 100vw;
@@ -28,6 +29,12 @@ const ButtonCont = styled.div`
 const ImgCont = styled.div`
 width: 75vh;
 `
+const Question = styled.div`
+position: relative;
+bottom: 600px
+left: 1300px
+
+`
 
 export default function Home() {
   const router = useRouter()
@@ -44,7 +51,7 @@ export default function Home() {
       />
     </ImgCont>
     
-
+    
     <ButtonCont>
       <Button
         text="Start!"
@@ -55,6 +62,7 @@ export default function Home() {
         text="Settings"
         onClick={()=>router.push('/settings')}
       />
+        
     </ButtonCont>
 </Main>
 }
