@@ -96,7 +96,8 @@ export default function Stadium () {
     }
 
     useState(()=>{
-        const socket = io('http://localhost:5000')
+        // const socket = io('http://localhost:5000')
+        const socket = io('https://pokemon-api-bcit.herokuapp.com')
         setMySoc(socket);
         setTimeout(JoinUser,500);
 
