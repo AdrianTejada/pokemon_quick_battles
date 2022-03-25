@@ -136,7 +136,7 @@ export default function Home() {
         }}/>
       </ButtonCont>
       <Text color={themetext[theme]}>
-        Don't have an account? Click <Link onClick={()=>setSignup(true)}>here</Link> to sign up!
+        Don&apos;t have an account? Click <Link onClick={()=>setSignup(true)}>here</Link> to sign up!
       </Text>
     </LoginCont>
     </div>
