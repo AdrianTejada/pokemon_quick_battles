@@ -1,6 +1,7 @@
 import { Background } from "@/Comps/Background"
 import styled from "styled-components"
 import logo from '@/public/assets/logo.png'
+import question from '@/public/instructions/question.png'
 import Image from "next/image"
 import Button from "../Comps/Button"
 import { useRouter } from "next/router"
@@ -95,6 +96,11 @@ const SignupButtCont = styled.div`
   top: 80px;
   align-items: center;
 `
+const Question = styled.div`
+position: relative;
+bottom: 550px;
+left: 1325px;
+`
 
 
 export default function Home() {
@@ -115,6 +121,13 @@ export default function Home() {
   <Image
   src={logo}
   />
+
+  <Question>
+  <Image
+  src={question} onClick={()=>router.push('/tutorial')}
+  />
+  </Question>
+  
   <LoginCont>
       <TextInput type="text" placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
       <TextInput type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
