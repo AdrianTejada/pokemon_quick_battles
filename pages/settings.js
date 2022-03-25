@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
-
+import Image from "next/image"
 import { Background } from "@/Comps/Background";
 import  SettingsCard  from "../Comps/SettingsCard";
 import Button from "@/Comps/Button";
+import question from '@/public/instructions/question.png'
 
 
 const Main = styled.div`
@@ -41,9 +42,13 @@ export default function Settings () {
     const router = useRouter()
     return <Main>
         <TopBtnBar>
+           
             <Button
                 text="Back"
                 onClick={()=>router.push('/stadium')}
+            />
+             <Image
+            src={question} onClick={()=>router.push('/tutorial')}
             />
 
             <Button
@@ -54,6 +59,7 @@ export default function Settings () {
                     router.push('/')
                 }}
             />
+
         </TopBtnBar>
 
         <SettingCont>

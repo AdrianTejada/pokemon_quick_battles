@@ -1,12 +1,17 @@
 import styled from "styled-components"
 import prof from '@/public/assets/Professor_Cerise_PJ.png'
-import instruct1 from "@/public/instructions/1.png"
-
+import { useState } from "react";
+import Image from 'next/image'
+import firstintro from '@/public/instructions/firstintro.png'
+import secondintro from '@/public/instructions/secondintro.png'
+import thirdintro from '@/public/instructions/thirdintro.png'
+import fourthintro from '@/public/instructions/fourthintro.png'
+import fifthintro from '@/public/instructions/fifthintro.png'
+import { useRouter } from "next/router"
 import { AiOutlineCaretDown } from 'react-icons/ai'
 
 import { useProvider } from "@/utils/provider"
 
-import Image from "next/image"
 
 const Cont = styled.div`
 width: 100vw;
@@ -110,19 +115,25 @@ padding: 2em;
 `
 
 export const IntroCard = ({
-    char = "professor henry",
-    description = "First you want to pick you first pokemon",
+    
+    char = "Professor Henry",
+    description = "First you want to pick you first pokemon by searching it!",
+    description2 = "Secondly, you can drag the pokemon into one of the 2 cards on the page!",
+    description3 = "Thirdly, when both cards have a pokemon in them the battle button will appear and you can click on it!",
+    description4 = "Finally, after waiting a few seconds the result of the battle will appear!",
+    description5 = "Now you have the chance to learn which pokemon is stronger in our game POKEMON QUICK BATTLES",
     nextPage = () => {console.log("I was clicked")},
     instructImg = ""
 }) => {
+
     const {theme} = useProvider()
-    
+    const [state, nextState] = useState(0);
+    const router = useRouter()
+
+    if(state === 0)
+    {
     return <Cont>
-
-        
-
-
-        <BotBar onClick={()=>{nextPage()}}>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
             <Top>
                 <Triangle />
                 <NameContent>
@@ -147,10 +158,7 @@ export const IntroCard = ({
             <Middle>
                 <ImgCont2>
                     <Image
-                        src={instruct1}
-                        width={557}
-                        height={309}
-                        layout="responsive"
+                    src={firstintro}
                     />
                 </ImgCont2>
             </Middle>
@@ -166,6 +174,190 @@ export const IntroCard = ({
         </BGImages>
 
     </Cont>
+    }
+
+    if(state === 1)
+    {
+    return <Cont>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
+            <Top>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
+            </Top>
+
+            <TxtCont>
+                <PContent>
+                    {description2}
+                </PContent>
+
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/>
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
+        </BotBar>
+
+        <BGImages>
+            <Middle>
+                <ImgCont2>
+                <Image
+                    src={secondintro}
+                    />
+                </ImgCont2>
+            </Middle>
+
+            <ImgCont1>
+                <Image 
+                src={prof}
+                width={276}
+                height={575}
+                layout="responsive"
+                />
+            </ImgCont1>
+        </BGImages>
+
+    </Cont>
+    }
+
+    if(state === 2)
+    {
+    return <Cont>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
+            <Top>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
+            </Top>
+
+            <TxtCont>
+                <PContent>
+                    {description3}
+                </PContent>
+
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/>
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
+        </BotBar>
+
+        <BGImages>
+            <Middle>
+                <ImgCont2>
+                <Image
+                    src={thirdintro}
+                    />
+                </ImgCont2>
+            </Middle>
+
+            <ImgCont1>
+                <Image 
+                src={prof}
+                width={276}
+                height={575}
+                layout="responsive"
+                />
+            </ImgCont1>
+        </BGImages>
+
+    </Cont>
+    }
+    if(state === 3)
+    {
+    return <Cont>
+        <BotBar onClick={()=>{nextState (state + 1)}}>
+            <Top>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
+            </Top>
+
+            <TxtCont>
+                <PContent>
+                    {description4}
+                </PContent>
+
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/>
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
+        </BotBar>
+
+        <BGImages>
+            <Middle>
+                <ImgCont2>
+                <Image
+                    src={fourthintro}
+                    />
+                </ImgCont2>
+            </Middle>
+
+            <ImgCont1>
+                <Image 
+                src={prof}
+                width={276}
+                height={575}
+                layout="responsive"
+                />
+            </ImgCont1>
+        </BGImages>
+
+    </Cont>
+    }
+
+    if(state === 4)
+    {
+    return <Cont>
+        <BotBar onClick={()=>router.push('/')}>
+            <Top>
+                <Triangle />
+                <NameContent>
+                    {char}
+                </NameContent>  
+            </Top>
+
+            <TxtCont>
+                <PContent>
+                    {description5}
+                </PContent>
+
+                <Bottom>
+                    <BotBtn>
+                        <AiOutlineCaretDown size="2em"/> 
+                    </BotBtn>
+                </Bottom>
+            </TxtCont>
+        </BotBar>
+
+        <BGImages>
+            <Middle>
+                <ImgCont2>
+                <Image
+                    src={fifthintro}
+                    />
+                </ImgCont2>
+            </Middle>
+
+            <ImgCont1>
+                <Image 
+                src={prof}
+                width={276}
+                height={575}
+                layout="responsive"
+                />
+            </ImgCont1>
+        </BGImages>
+
+    </Cont>
+    }
 }
 
 

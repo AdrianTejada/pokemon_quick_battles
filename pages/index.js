@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useProvider } from "@/utils/provider"
 import { themetext } from "@/Comps/variable"
 import axios from "axios"
+import question from '@/public/instructions/question.png'
 
 const Main = styled.div`
     width: 100vw;
@@ -83,6 +84,11 @@ const FieldCont = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
+`
+const Question = styled.div`
+position: relative;
+bottom: 600px;
+left: 1300px;
 `
 
 const SignupButtCont = styled.div`
