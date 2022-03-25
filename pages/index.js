@@ -86,9 +86,9 @@ const Row = styled.div`
   justify-content: space-between;
 `
 const Question = styled.div`
-position: relative;
-bottom: 600px;
-left: 1300px;
+position: absolute;
+top: 10px;
+right: 10px;
 `
 
 const SignupButtCont = styled.div`
@@ -121,6 +121,14 @@ export default function Home() {
   <Image
   src={logo}
   />
+
+  <Question>
+    <Image
+    src={question} onClick={()=>router.push('/tutorial')}
+    width="50px"
+    height="50px"
+    />
+    </Question>
   <LoginCont>
       <TextInput type="text" placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
       <TextInput type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
