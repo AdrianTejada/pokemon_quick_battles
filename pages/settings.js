@@ -32,14 +32,18 @@ export default function Settings () {
         <HomeButton>
             <Button
                 text="Home"
-                onClick={()=>router.push('/')}
+                onClick={()=>router.push('/stadium')}
             />
         </HomeButton>
 
         <SettingButton>
             <Button
-                text="Start!"
-                onClick={()=>router.push('/stadium')}
+                text="Log Out"
+                onClick={()=>{
+                    localStorage.removeItem('username')
+                    localStorage.removeItem('token')
+                    router.push('/')
+                }}
             />
         </SettingButton>
 
