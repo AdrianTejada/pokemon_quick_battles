@@ -1,12 +1,7 @@
 import styled from "styled-components"
 import { IntroCard } from "@/Comps/IntroCard";
 import { Background } from "@/Comps/Background"
-import {Image} from "Next/image"
-import Button from "@/Comps/Button";
 import { useRouter } from "next/router"
-import { useState } from "react";
-import { DndProvider } from 'react-dnd';
-import { TouchBackend} from 'react-dnd-touch-backend'
 
 const Main = styled.div`
     width: 100vw;
