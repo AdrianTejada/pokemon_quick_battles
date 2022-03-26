@@ -18,7 +18,6 @@ const Main = styled.div`
     align-items: center;
     flex-direction: column;
 `
-
 const LoginCont = styled.div`
   margin-top: 30px;
   /* height: 70px; */
@@ -27,17 +26,22 @@ const LoginCont = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-
 const ButtonCont = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10px;
 `
-
+const TextInputCont = styled.div`
+display: flex;
+flex-direction: column;
+margin-bottom: 3vh;
+`
 const TextInput = styled.input`
   font-size: 20px;
-  margin-top: 5px;
-  width: 250px;
+  margin: 0.2em 0;
+  padding: 0.5em 0.7em;
+  border-radius: 10em;
+  width: 17em;
 `
 
 const Text = styled.p`
@@ -66,8 +70,19 @@ const SignupCont = styled.div`
   width: 60%;
   display: flex;
   flex-direction: column;
+  background-color: rgba(148, 148, 148, 0.8);
+  padding: 2em 2em;
+  border-radius: 1vw;
+  height: max-content;
 `
+const SignUpHeader = styled.div`
+font-family: Share Tech;
+font-size: 2em;
+width: 100%;
+text-align: center;
 
+margin: 1vw 0;
+`
 const FieldText = styled.p`
  color: ${props=>props.color};
  font-size: 20px;
@@ -85,6 +100,11 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
 `
+const RowCenter = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+`
 const QuestionCont = styled.div`
 position: absolute;
 top: 10px;
@@ -94,18 +114,12 @@ right: 10px;
 const SignupButtCont = styled.div`
   position: relative;
   align-self: center;
-  /* height: 200px; */
   justify-content: space-between;
   flex-direction: column;
-  /* background-color:red; */
-  top: 80px;
   align-items: center;
+  margin-top: 5vh;
 `
-const Question = styled.div`
-position: relative;
-bottom: 550px;
-left: 1325px;
-`
+
 
 
 export default function Home() {
@@ -135,8 +149,11 @@ export default function Home() {
     />
     </QuestionCont>
   <LoginCont>
+    <TextInputCont>
       <TextInput type="text" placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
       <TextInput type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
+    </TextInputCont>
+      
       <ButtonCont>
         <Button text="Login" onClick={async ()=>{
           const result = await axios.post('https://pokemon-api-bcit.herokuapp.com/login', {
@@ -159,19 +176,26 @@ export default function Home() {
     </div>
     :<SignupCont>
 
+      
+      <SignUpHeader>
+        Sign up now!
+      </SignUpHeader>
+
       <FieldCont>
         <FieldText>Username</FieldText>
         <TextInput onChange={(e)=>setUser(e.target.value)}/>
       </FieldCont>
+
       <Row>
-      <FieldCont>
-        <FieldText>Email</FieldText>
-        <TextInput onChange={(e)=>setEmail(e.target.value)}/>
-      </FieldCont>
-      <FieldCont>
-        <FieldText>Confirm Email</FieldText>
-        <TextInput onChange={(e)=>setEmail_C(e.target.value)}/>
-      </FieldCont>
+        <FieldCont>
+          <FieldText>Email</FieldText>
+          <TextInput onChange={(e)=>setEmail(e.target.value)}/>
+        </FieldCont>
+
+        <FieldCont>
+          <FieldText>Confirm Email</FieldText>
+          <TextInput onChange={(e)=>setEmail_C(e.target.value)}/>
+        </FieldCont>
       </Row>
 
       <Row>
@@ -186,15 +210,22 @@ export default function Home() {
       </Row>
 
       <SignupButtCont>
-        <Button text="Sign Up" onClick={async ()=>{
-          const result = await axios.post('https://pokemon-api-bcit.herokuapp.com/signup', {
-            email,
-            username,
-            password
-          })
-          setSignup(false)
-        }}/>
-        <LinkText onClick={()=>setSignup(false)}>Back to Login</LinkText>
+        <RowCenter>
+          <Button text="Sign Up" onClick={async ()=>{
+            const result = await axios.post('https://pokemon-api-bcit.herokuapp.com/signup', {
+              email,
+              username,
+              password
+            })
+            setSignup(false)
+            }}
+          />
+        </RowCenter>
+        
+        <RowCenter>
+          <LinkText onClick={()=>setSignup(false)}>Back to Login</LinkText>
+        </RowCenter>
+        
       </SignupButtCont>
     </SignupCont>}
 </Main>
