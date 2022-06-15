@@ -157,11 +157,13 @@ export default function Home() {
       <ButtonCont>
         <Button text="Login" onClick={async ()=>{
           const result = await axios.post('https://pokemon-api-bcit.herokuapp.com/login', {
+          // const result = await axios.post('http://localhost:5000/login', {
             email,
             password
           })
-          if (result.data == "user not found"){
-            alert("Wrong Credentials :c")
+          console.log(result.data)
+          if (result.data == "user not found" || result.data == "could not login"){
+            alert("Wrong Credentials")
           } else {
             localStorage.setItem('token', result.data.token)
             localStorage.setItem('username', result.data.username)
@@ -213,6 +215,7 @@ export default function Home() {
         <RowCenter>
           <Button text="Sign Up" onClick={async ()=>{
             const result = await axios.post('https://pokemon-api-bcit.herokuapp.com/signup', {
+            // const result = await axios.post('http://localhost:5000/signup', {
               email,
               username,
               password
